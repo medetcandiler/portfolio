@@ -1,7 +1,13 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Roboto  } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import { ReduxProvider } from './redux/provider'
+import Navbar from './components/Navbar/Navbar'
+
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,13 +17,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <div className="main">
           <div className="gradient"></div>
         </div>
-        <div className="app">
-          {children}
-        </div>
+        <ReduxProvider>
+          <div className="app">
+            <Navbar />
+            {children}
+          </div>
+        </ReduxProvider>
       </body>
     </html>
   )
