@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  selectedLink: null
+  selectedLink: null,
+  showMobileNav: false,
 };
 
 const navSlice = createSlice({
@@ -10,10 +11,13 @@ const navSlice = createSlice({
   reducers: {
     setSelectedLink: (state, action) => {
       state.selectedLink = action.payload;
+    },
+    setShowMobileNav: (state) => {
+      state.showMobileNav = !state.showMobileNav;
     }
   }
 })
 
-export const { setSelectedLink } = navSlice.actions;
+export const { setSelectedLink, setShowMobileNav } = navSlice.actions;
 export default navSlice.reducer;
 
