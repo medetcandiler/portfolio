@@ -1,6 +1,9 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 
+import { ReduxProvider } from './redux/provider'
+import Navbar from './components/Navbar/Navbar'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -15,9 +18,12 @@ export default function RootLayout({ children }) {
         <div className="main">
           <div className="gradient"></div>
         </div>
-        <div className="app">
-          {children}
-        </div>
+        <ReduxProvider>
+          <div className="app">
+            <Navbar />
+            {children}
+          </div>
+        </ReduxProvider>
       </body>
     </html>
   )
