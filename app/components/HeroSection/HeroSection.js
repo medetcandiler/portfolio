@@ -1,0 +1,39 @@
+'use client'
+import Typewriter from 'typewriter-effect';
+import Image from 'next/image';
+
+const HeroSection = () => {
+  return (
+    <section className='container mx-auto flex h-screen -mt-[80px] w-full justify-center items-center'>
+      <div className='left w-full text-center flex flex-col space-y-6 md:w-3/5 md:text-start'>
+        <h1 className='text-5xl font-bold md:text-6xl lg:text-7xl '>Medetcan Diler</h1>
+        <div className=' flex items-center justify-center space-x-2 text-2xl md:text-3xl md:justify-start lg:text-4xl '>
+          <p className=''>I am a</p>
+          <span className='text-[#6b3e99]'>
+            <Typewriter
+              options={{
+                strings: ['Frontend Developer', 'Mechanical Engineer'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </span>
+        </div>
+        <p className='text-md leading-relaxed pr-10 md:text-lg '>
+          Specializing in frontend development, I deliver efficient solutions with a keen eye for detail and a knack for creative problem-solving. I thrive both independently and in collaborative team settings, dedicated to website development and a commitment to continuous improvement.
+        </p>
+      </div>
+      <div className='hidden right w-2/5 -mt-36 md:flex md:justify-center md:items-center'>
+        <Image
+          className='rounded'
+          src='/images/profile.png'
+          width={400}
+          height={400}
+          alt='profile picture'
+        />
+      </div>
+    </section>
+  )
+}
+
+export default HeroSection
