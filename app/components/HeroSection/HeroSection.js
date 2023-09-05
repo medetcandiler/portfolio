@@ -20,8 +20,8 @@ const HeroSection = () => {
   }
 
   return (
-    <section ref={heroRef} className={`container mx-auto flex h-screen -mt-[80px] w-full justify-center items-center transition-opacity ease-in duration-800 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <div className='left w-full text-center flex flex-col space-y-5 sm:space-y-6 md:w-3/5 md:text-start'>
+    <section ref={heroRef} className={`container mx-auto flex h-screen -mt-[80px] w-full justify-center items-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+      <div className='left w-full text-center flex flex-col space-y-4 sm:space-y-6 md:w-3/5 md:text-start'>
         <h1 className='text-5xl font-bold md:text-6xl lg:text-7xl '>Medetcan Diler</h1>
         <div className=' flex items-center justify-center space-x-2 text-2xl md:text-3xl md:justify-start lg:text-4xl '>
           <p className='whitespace-nowrap'>I am a</p>
@@ -39,7 +39,7 @@ const HeroSection = () => {
           Specializing in frontend development, I deliver efficient solutions with a keen eye for detail and a knack for creative problem-solving. I thrive both independently and in collaborative team settings, dedicated to website development and a commitment to continuous improvement.
         </p>
         <div>
-          <button onClick={handleDownload} className='text-start bg-[#6b3e99] px-4 py-3 rounded duration-100 ease-linear transform  text-[#fafafa] hover:bg-[#4a2771] hover:rounded-full'>
+          <button onClick={handleDownload} className='text-start bg-[#6b3e99] px-4 py-3 rounded duration-300 ease-linear transform  text-[#fafafa] hover:bg-[#4a2771] hover:-translate-y-[3px]'>
             Download CV
           </button>
         </div>

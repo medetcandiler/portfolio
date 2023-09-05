@@ -1,16 +1,12 @@
 'use client'
 import { useDispatch, useSelector } from "react-redux";
-import { useRef } from "react";
 import { setShowMobileNav, setSelectedLink } from "@/app/redux/features/navSlice";
-import useIsVisible from "@/app/utils/useIsVisible";
+
 
 import styles from './HamburgerMenu.module.css'
 
 
 const HamburgerMenu = () => {
-  const hamRef = useRef();
-  const isVisible = useIsVisible(hamRef)
-
   const selectedLink = useSelector(state => state.nav.selectedLink)
   const showMobileNav = useSelector(state => state.nav.showMobileNav);
   const dispatch = useDispatch();
@@ -21,7 +17,7 @@ const HamburgerMenu = () => {
     dispatch(setSelectedLink(e.target.textContent))
   }
   return (
-    <section ref={hamRef} className="hamburger">
+    <section className="hamburger">
       <div className={`${styles.container} ${showMobileNav && styles.change}`} onClick={handleHamClick}>
         <div className={styles.bar1}></div>
         <div className={styles.bar2}></div>
