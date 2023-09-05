@@ -9,6 +9,7 @@ const useIsVisible = (ref) => {
       setIsIntersecting(entry.isIntersecting)
     })
     observer.observe(ref.current);
+    console.log(ref.current)
     return () => {
       observer.disconnect()
     }

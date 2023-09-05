@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           <div className="gradient"></div>
         </div>
         <ReduxProvider>
-          <div className="app">
+          <div className="app font-serif">
             <Navbar />
             {children}
           </div>

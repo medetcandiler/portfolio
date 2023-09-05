@@ -1,12 +1,15 @@
 import HeroSection from "./components/HeroSection/HeroSection";
-import Works from "./components/Works/Works";
+import WorksIntro from "./components/WorksIntro/WorksIntro";
+import FirstWork from "./components/FirstWork/FirstWork";
 
 export default function Home() {
   return (
-    <main className=''>
+    <main className="px-12">
       <HeroSection />
-      <Works />
-      <div className="h-screen"></div>
+      <WorksIntro />
+      <FirstWork />
+      <FirstWork />
+      <FirstWork />
       <div className="h-screen"></div>
     </main>
   )
