@@ -1,17 +1,16 @@
 'use client'
 import Image from "next/image";
-import Link from "next/link";
-import { useSelector, useDispatch } from "react-redux";
 
-import { setSelectedLink } from "@/app/redux/features/navSlice";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 
 const Navbar = () => {
-  const selectedLink = useSelector(state => state.nav.selectedLink);
-  const dispatch = useDispatch();
-
-  const handleSelectLink = (e) => {
-    dispatch(setSelectedLink(e.target.textContent))
+  const scrollToWorkSection = (e) => {
+    if (typeof document !== "undefined") {
+      const workSection = document.getElementById(`${e.target.textContent.toLowerCase()}`);
+      if (workSection) {
+        workSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   }
 
   return (
@@ -26,9 +25,9 @@ const Navbar = () => {
         />
       </div>
       <div className="hidden right  space-x-12 text-lg font-semibold md:flex">
-        <Link href='#work' onClick={e => handleSelectLink(e)} className={`link`}>Work</Link>
-        <Link href='#about' onClick={e => handleSelectLink(e)} className={`link`}>About</Link>
-        <Link href='#contact' onClick={e => handleSelectLink(e)} className={`link`}>Let's talk</Link>
+        <button onClick={e => scrollToWorkSection(e)}>Work</button>
+        <button onClick={e => scrollToWorkSection(e)}>About</button>
+        <button onClick={e => scrollToWorkSection(e)}>Let's talk</button>
       </div>
       <section className="md:hidden">
         <HamburgerMenu />

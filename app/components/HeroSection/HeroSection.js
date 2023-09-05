@@ -21,11 +21,11 @@ const HeroSection = () => {
   }, [isVisible])
 
   const handleDownload = () => {
-    const cvUrl = '/pdf/cv.pdf';
+    const cvUrl = '/pdf/MedetcanDilerCv.pdf';
     const anchor = document.createElement('a');
     anchor.href = cvUrl;
     anchor.target = '_blank';
-    anchor.download = 'cv.pdf';
+    anchor.download = 'MedetcanDilerCv.pdf';
     anchor.click();
   }
 
