@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 
 import { setSelectedLink } from "@/app/redux/features/navSlice";
@@ -25,9 +26,9 @@ const Navbar = () => {
         />
       </div>
       <div className="hidden right  space-x-12 text-lg font-semibold md:flex">
-        <button onClick={e => handleSelectLink(e)} className={`${selectedLink === 'Work' ? 'selectedLink' : ''} link`}>Work</button>
-        <button onClick={e => handleSelectLink(e)} className={`${selectedLink === 'About' ? 'selectedLink' : ''} link`}>About</button>
-        <button onClick={e => handleSelectLink(e)} className={`${selectedLink === 'Let\'s talk' ? 'selectedLink' : ''} link`}>Let's talk</button>
+        <Link href='#work' onClick={e => handleSelectLink(e)} className={`link`}>Work</Link>
+        <Link href='#about' onClick={e => handleSelectLink(e)} className={`link`}>About</Link>
+        <Link href='#contact' onClick={e => handleSelectLink(e)} className={`link`}>Let's talk</Link>
       </div>
       <section className="md:hidden">
         <HamburgerMenu />
