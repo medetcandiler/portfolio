@@ -24,7 +24,7 @@ const Navbar = () => {
           alt="logo"
         />
       </div>
-      <div className="hidden right flex space-x-12 text-lg font-semibold md:block">
+      <div className="hidden right  space-x-12 text-lg font-semibold md:flex">
         <button onClick={e => handleSelectLink(e)} className={`${selectedLink === 'Work' ? 'selectedLink' : ''} link`}>Work</button>
         <button onClick={e => handleSelectLink(e)} className={`${selectedLink === 'About' ? 'selectedLink' : ''} link`}>About</button>
         <button onClick={e => handleSelectLink(e)} className={`${selectedLink === 'Let\'s talk' ? 'selectedLink' : ''} link`}>Let's talk</button>
