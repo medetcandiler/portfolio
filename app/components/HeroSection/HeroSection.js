@@ -1,14 +1,19 @@
 'use client'
 import Typewriter from 'typewriter-effect';
 import Image from 'next/image';
+import { useRef } from 'react';
+
+import useIsVisible from '@/app/utils/useIsVisible';
 
 const HeroSection = () => {
+  const heroRef = useRef();
+  const isVisible = useIsVisible(heroRef);
   return (
-    <section className='container mx-auto flex h-screen -mt-[80px] w-full justify-center items-center'>
-      <div className='left w-full text-center flex flex-col space-y-6 md:w-3/5 md:text-start'>
+    <section ref={heroRef} className={`container mx-auto flex h-screen -mt-[80px] w-full justify-center items-center transition-opacity ease-in duration-800 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className='left w-full text-center flex flex-col space-y-3 sm:space-y-6 md:w-3/5 md:text-start'>
         <h1 className='text-5xl font-bold md:text-6xl lg:text-7xl '>Medetcan Diler</h1>
         <div className=' flex items-center justify-center space-x-2 text-2xl md:text-3xl md:justify-start lg:text-4xl '>
-          <p className=''>I am a</p>
+          <p className='whitespace-nowrap'>I am a</p>
           <span className='text-[#6b3e99]'>
             <Typewriter
               options={{
@@ -19,7 +24,7 @@ const HeroSection = () => {
             />
           </span>
         </div>
-        <p className='text-md leading-relaxed pr-10 md:text-lg '>
+        <p className='text-md sm:px-10 leading-relaxed md:px-0 md:pr-24 md:text-lg '>
           Specializing in frontend development, I deliver efficient solutions with a keen eye for detail and a knack for creative problem-solving. I thrive both independently and in collaborative team settings, dedicated to website development and a commitment to continuous improvement.
         </p>
       </div>
