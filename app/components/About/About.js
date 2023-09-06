@@ -22,7 +22,7 @@ const About = () => {
         </p>
         <p>You can find me on:</p>
         <div className="logos flex items-center justify-center space-x-6 md:justify-start">
-          <Link href='https://github.com/medetcandiler'>
+          <Link href='https://github.com/medetcandiler' target="_blank">
             <Image
               src={'/images/github.svg'}
               width={55}
@@ -30,7 +30,7 @@ const About = () => {
               alt="github"
             />
           </Link>
-          <Link href='https://www.linkedin.com/in/medetcandiler/'>
+          <Link href='https://www.linkedin.com/in/medetcandiler/' target="_blank">
             <Image
               src={'/images/linkedin.png'}
               width={60}
