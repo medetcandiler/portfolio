@@ -25,9 +25,9 @@ const Navbar = () => {
         />
       </div>
       <div className="hidden right  space-x-12 text-lg font-semibold md:flex">
-        <button onClick={e => scrollToWorkSection(e)}>Work</button>
-        <button onClick={e => scrollToWorkSection(e)}>About</button>
-        <button onClick={e => scrollToWorkSection(e)}>Let's talk</button>
+        <button onClick={e => scrollToWorkSection(e)} className="link">Work</button>
+        <button onClick={e => scrollToWorkSection(e)} className="link">About</button>
+        <button onClick={e => scrollToWorkSection(e)} className="link">Let's talk</button>
       </div>
       <section className="md:hidden">
         <HamburgerMenu />

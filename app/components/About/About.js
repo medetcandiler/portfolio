@@ -8,7 +8,7 @@ const About = () => {
   const isVisible = useIsVisible(aboutRef)
 
   return (
-    <section ref={aboutRef} className={`py-32 flex flex-col items-center space-y-6 px-6 md:flex-row md:space-y-0 md:space-x-10 transition-opacity ease-in duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+    <section ref={aboutRef} className={`h-screen flex flex-col items-center space-y-6 px-6 md:flex-row md:space-y-0 md:space-x-10 transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
       <div id="about" className="left text-md flex flex-col text-center space-y-5  leading-relaxed md:text-lg md:w-2/3 md:text-start">
         <h1 className="text-5xl font-semibold" >Hey there! <span className="text-5xl" role="img" aria-label="hello">👋</span></h1>
         <p> I'm a Frontend Developer with a passion for creating captivating web experiences.</p>
@@ -60,10 +60,9 @@ const About = () => {
             <Link
               href='/MEDETCANDILERCV.pdf'
               locale={false}
-              className="btn"
               target="_blank"
             >
-              Download CV
+              <button className="cvBtn">Download CV</button>
             </Link>
           </div>
         </div>

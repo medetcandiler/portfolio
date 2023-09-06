@@ -15,6 +15,9 @@ module.exports = {
       colors: {
         transparentPurple: 'rgba(74, 39, 113, 0.1)',
         hoverPurple: 'rgba(74, 39, 113, 0.2)'
+      },
+      height: {
+        'screen-80': 'calc(100vh - 80px)'
       }
     },
   },
