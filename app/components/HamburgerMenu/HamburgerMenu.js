@@ -11,6 +11,7 @@ const HamburgerMenu = () => {
     dispatch(setShowMobileNav());
   }
 
+
   const scrollToWorkSection = (e) => {
     if (typeof document !== "undefined") {
       const workSection = document.getElementById(`${e.target.textContent.toLowerCase()}`);
@@ -18,6 +19,7 @@ const HamburgerMenu = () => {
         workSection.scrollIntoView({ behavior: "smooth" });
       }
     }
+    dispatch(setShowMobileNav())
   }
 
   return (
