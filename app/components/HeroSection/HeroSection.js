@@ -46,7 +46,7 @@ const HeroSection = () => {
           <Link
             href='/MEDETCANDILERCV.pdf'
             locale={false}
-            className='text-start bg-[#6b3e99] px-4 py-3 rounded duration-300 ease-linear transform  text-[#fafafa] hover:bg-[#4a2771] hover:-translate-y-[3px]'
+            className='text-start btn'
             target='_blank'
           >
             Download CV
