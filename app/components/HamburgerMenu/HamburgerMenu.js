@@ -12,9 +12,10 @@ const HamburgerMenu = () => {
   }
 
 
-  const scrollToWorkSection = (e) => {
+  const scrollToSection = (e) => {
+    const section = e.target.textContent.split(`'`)[0].toLowerCase();
     if (typeof document !== "undefined") {
-      const workSection = document.getElementById(`${e.target.textContent.toLowerCase()}`);
+      const workSection = document.getElementById(`${section}`);
       if (workSection) {
         workSection.scrollIntoView({ behavior: "smooth" });
       }
@@ -29,11 +30,11 @@ const HamburgerMenu = () => {
         <div className={styles.bar2}></div>
         <div className={styles.bar3}></div>
       </div>
-      <div className={`absolute ease-in duration-200 left-0 w-full transition-all duration-700 ${showMobileNav ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`absolute ease-in duration-300 left-0 w-full transition-all ${showMobileNav ? 'opacity-100' : 'opacity-0'}`}>
         <div className="flex flex-col items-center space-y-1.5 ">
-          <button onClick={e => scrollToWorkSection(e)}>Work</button>
-          <button onClick={e => scrollToWorkSection(e)}>About</button>
-          <button onClick={e => scrollToWorkSection(e)}>Let's talk</button>
+          <button onClick={e => scrollToSection(e)}>Work</button>
+          <button onClick={e => scrollToSection(e)}>About</button>
+          <button onClick={e => scrollToSection(e)}>Let's talk</button>
         </div>
       </div>
     </section>

@@ -47,11 +47,11 @@ const About = () => {
       </div>
       <div className="right flex justify-center md:w-1/3">
         <div className="flex flex-col items-center space-y-6">
-          <div className="w-[150px] h-[150px]">
+          <div className="w-[200px] h-[200px] lg:w-[250px] lg:h-[250px]">
             <Image
               src={'/images/medetpp.jpeg'}
-              width={220}
-              height={220}
+              width={250}
+              height={250}
               alt="medetcan profile picture"
               className="rounded-lg"
             />
