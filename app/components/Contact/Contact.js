@@ -18,17 +18,16 @@ const schema = yup.object({
 
 const Contact = () => {
   const [isSending, setIsSending] = useState(false);
-  const [isShowToast, setIsShowToast] = useState(false);
+  const [isShowToast, setIsShowToast] = useState(true);
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema)
   });
   const onSubmit = async (data) => {
     try {
       setIsSending(true)
-      // await addDoc(collection(db, 'messages'), {
-      //   data
-      // });
-      console.log(data)
+      await addDoc(collection(db, 'messages'), {
+        data
+      });
       setIsShowToast(true);
     } catch (error) {
       console.log(error.message);
@@ -96,7 +95,7 @@ const Contact = () => {
             </button>
           </div>
         </form>
-        {isShowToast && <Toast message={'You have successfully send your message'} isShowToast={isShowToast} setIsShowToast={setIsShowToast} />}
+        <Toast message={'Message delivered successfully.'} isShowToast={isShowToast} setIsShowToast={setIsShowToast} />
       </div>
     </div>
   )
