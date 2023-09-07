@@ -8,9 +8,9 @@ const About = () => {
   const isVisible = useIsVisible(aboutRef)
 
   return (
-    <section ref={aboutRef} className={`h-screen flex flex-col items-center space-y-6 px-6 md:flex-row md:space-y-0 md:space-x-10 transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+    <section ref={aboutRef} className={` flex flex-col items-center space-y-6 px-6 md:flex-row md:space-y-0 md:space-x-10 transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"} lg:h-screen`}>
       <div id="about" className="left text-md flex flex-col text-center space-y-5  leading-relaxed md:text-lg md:w-2/3 md:text-start">
-        <h1 className="text-5xl font-semibold" >Hey there! <span className="text-5xl" role="img" aria-label="hello">👋</span></h1>
+        <h1 className="text-5xl font-semibold " >Hey there! <span className="text-5xl" role="img" aria-label="hello">👋</span></h1>
         <p> I'm a Frontend Developer with a passion for creating captivating web experiences.</p>
         <p>After working as an engineer in the field for several months, I realized that my true calling lay in web development. I've always been drawn to coding, software, and computers, and I decided to make a career change to pursue my passion.
         </p>
@@ -47,18 +47,18 @@ const About = () => {
       </div>
       <div className="right flex justify-center md:w-1/3">
         <div className="flex flex-col items-center space-y-6">
-          <div className="w-[150px] h-[150px]">
+          <div className="w-[200px] h-[200px] lg:w-[250px] lg:h-[250px]">
             <Image
               src={'/images/medetpp.jpeg'}
-              width={220}
-              height={220}
+              width={250}
+              height={250}
               alt="medetcan profile picture"
               className="rounded-lg"
             />
           </div>
           <div className="">
             <Link
-              href='/MEDETCANDILERCV.pdf'
+              href='/files/CV.pdf'
               locale={false}
               target="_blank"
             >

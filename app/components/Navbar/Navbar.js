@@ -4,9 +4,10 @@ import Image from "next/image";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 
 const Navbar = () => {
-  const scrollToWorkSection = (e) => {
+  const scrollToSection = (e) => {
+    const section = e.target.textContent.split(`'`)[0].toLowerCase();
     if (typeof document !== "undefined") {
-      const workSection = document.getElementById(`${e.target.textContent.toLowerCase()}`);
+      const workSection = document.getElementById(`${section}`);
       if (workSection) {
         workSection.scrollIntoView({ behavior: "smooth" });
       }
@@ -25,9 +26,9 @@ const Navbar = () => {
         />
       </div>
       <div className="hidden right  space-x-12 text-lg font-semibold md:flex">
-        <button onClick={e => scrollToWorkSection(e)} className="link">Work</button>
-        <button onClick={e => scrollToWorkSection(e)} className="link">About</button>
-        <button onClick={e => scrollToWorkSection(e)} className="link">Let's talk</button>
+        <button onClick={e => scrollToSection(e)} className="link">Work</button>
+        <button onClick={e => scrollToSection(e)} className="link">About</button>
+        <button onClick={e => scrollToSection(e)} className="link">Let's talk</button>
       </div>
       <section className="md:hidden">
         <HamburgerMenu />
