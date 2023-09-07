@@ -44,7 +44,7 @@ const HeroSection = () => {
         </p>
         <div className='pt-1'>
           <Link
-            href='/MEDETCANDILERCV.pdf'
+            href='/files/CV.pdf'
             locale={false}
             target='_blank'
           >
