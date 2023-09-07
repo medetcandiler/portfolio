@@ -6,7 +6,7 @@ const Toast = ({ message, isShowToast, setIsShowToast }) => {
     <div>
       <div
         id="toast-success"
-        className={`absolute  bottom-5 flex items-center w-full max-w-xs p-4 mb-4 bg-transparent rounded-lg shadow shadow-[#4a2771]transition-opacity ease-in duration-500 ${isShowToast ? "opacity-100 left-5" : "opacity-0 -left-20"}`}
+        className={`absolute  bottom-0 left-1/2 -translate-x-1/2 flex items-center p-4 mb-4 bg-transparent rounded-lg shadow shadow-[#4a2771] transition-opacity ease-in duration-500 ${isShowToast ? "opacity-100" : "opacity-0"} md:bottom-5 md:left-5 md:translate-x-0`}
         role="alert"
       >
         <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-amber-600 bg-[#4a2771] rounded-lg">
@@ -23,7 +23,7 @@ const Toast = ({ message, isShowToast, setIsShowToast }) => {
           </svg>
           <span className="sr-only">Check icon</span>
         </div>
-        <div className="ml-3 text-sm font-normal ">{message}</div>
+        <div className="ml-3 text-sm font-normal whitespace-nowrap ">{message}</div>
         <button
           type="button"
           onClick={handleClose}

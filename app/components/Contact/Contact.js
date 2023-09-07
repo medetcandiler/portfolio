@@ -18,7 +18,7 @@ const schema = yup.object({
 
 const Contact = () => {
   const [isSending, setIsSending] = useState(false);
-  const [isShowToast, setIsShowToast] = useState(true);
+  const [isShowToast, setIsShowToast] = useState(false);
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema)
   });
@@ -44,7 +44,7 @@ const Contact = () => {
   const isVisible = useIsVisible(contactRef);
 
   return (
-    <div id="let" ref={contactRef} className={`relative py-20 flex flex-col space-y-12 justify-center md:h-screen md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-0 transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+    <div id="let" ref={contactRef} className={`relative py-28 flex flex-col space-y-12 justify-center md:h-screen md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-0 transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
       <div className="flex justify-center items-center">
         <div className="flex flex-col text-center md:text-start">
           <h1 className="text-xl font-semibold text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-2xl">Connect With Me</h1>
@@ -52,7 +52,7 @@ const Contact = () => {
         </div>
       </div>
       <div className='right flex justify-center text-center md:w-1/2 md:text-start'>
-        <form onSubmit={handleSubmit(onSubmit)} className="border border-[#4a2771] p-12 rounded-3xl shadow-[#4a2771] shadow-xl md:p-14 lg:p-20" >
+        <form onSubmit={handleSubmit(onSubmit)} className="border border-[#4a2771] p-10 rounded-3xl shadow-[#4a2771] shadow-xl md:p-14 lg:p-20" >
           <div className="mb-4">
             <label
               htmlFor="password"
@@ -89,8 +89,8 @@ const Contact = () => {
               className={`bg-transparent  px-4 py-2 border-b border-black border-opacity-100 focus:outline-none ${errors.message && 'border-[#D40000] text-[#D40000]'}`}
             />
           </div>
-          <div>
-            <button type="submit" className="cvBtn flex items-center">
+          <div className="flex justify-center md:justify-start">
+            <button type="submit" className="cvBtn flex items-center ">
               {isSending && <Spinner />} Send Message
             </button>
           </div>
