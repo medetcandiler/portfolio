@@ -1,8 +1,14 @@
 import useIsVisible from "@/app/utils/useIsVisible";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useForm } from "react-hook-form";
+import { addDoc, collection } from "firebase/firestore";
+
+import { db } from "@/app/firebase/config";
+import Spinner from "../Spinner/Spinner";
+import Toast from "../Toast/Toast";
+
 
 const schema = yup.object({
   name: yup.string().required(),
@@ -11,17 +17,35 @@ const schema = yup.object({
 }).required()
 
 const Contact = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const [isSending, setIsSending] = useState(false);
+  const [isShowToast, setIsShowToast] = useState(false);
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema)
   });
-  const onSubmit = data => {
-    console.log(data)
+  const onSubmit = async (data) => {
+    try {
+      setIsSending(true)
+      // await addDoc(collection(db, 'messages'), {
+      //   data
+      // });
+      console.log(data)
+      setIsShowToast(true);
+    } catch (error) {
+      console.log(error.message);
+    } finally {
+      reset();
+      setIsSending(false);
+      setTimeout(() => {
+        setIsShowToast(false)
+      }, 5000)
+    }
+
   }
   const contactRef = useRef();
   const isVisible = useIsVisible(contactRef);
 
   return (
-    <div id="let" ref={contactRef} className={`py-20 flex flex-col space-y-12 justify-center md:h-screen md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-0 transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+    <div id="let" ref={contactRef} className={`relative py-20 flex flex-col space-y-12 justify-center md:h-screen md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-0 transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
       <div className="flex justify-center items-center">
         <div className="flex flex-col text-center md:text-start">
           <h1 className="text-xl font-semibold text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-2xl">Connect With Me</h1>
@@ -67,11 +91,12 @@ const Contact = () => {
             />
           </div>
           <div>
-            <button type="submit" className="cvBtn ">
-              Send Message
+            <button type="submit" className="cvBtn flex items-center">
+              {isSending && <Spinner />} Send Message
             </button>
           </div>
         </form>
+        {isShowToast && <Toast message={'You have successfully send your message'} isShowToast={isShowToast} setIsShowToast={setIsShowToast} />}
       </div>
     </div>
   )
