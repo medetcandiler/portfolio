@@ -63,7 +63,7 @@ const About = () => {
           </div>
           <div className="">
             <Link
-              href='/files/CV.pdf'
+              href='/medetcandilercv.pdf'
               locale={false}
               target="_blank"
             >
