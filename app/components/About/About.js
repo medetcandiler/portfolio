@@ -41,11 +41,13 @@ const About = () => {
             />
           </Link>
         </div>
-        <div className="flex items-center space-x-2">
-          <p>.. or send me an email at</p><span>:</span>
-          <p className="font-medium text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text duration-300 ease-in hover:translate-y-[-3px] hover:opacity-80">
-            <a href="mailto:medetdiler1996@gmail.com"> medetcandiler1996@gmail.com</a>
-          </p>
+        <div className="font-medium">
+          <p>
+            <span>.. or send me an email at</span>{' '}
+            :{' '}
+            <Link className="text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text duration-300 ease-in hover:translate-y-[-3px] hover:opacity-80" href="mailto:medetdiler1996@gmail.com">
+              medetdiler1996@gmail.com
+            </Link></p>{' '}
         </div>
       </div>
       <div className="right flex justify-center md:w-1/3">
