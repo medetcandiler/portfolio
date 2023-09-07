@@ -21,9 +21,10 @@ const About = () => {
           With a background in Mechanical Engineering, I bring a unique perspective to my frontend work. My engineering education has taught me the value of organization, systematic thinking, and effective problem-solving.
         </p>
         <p>You can find me on:</p>
-        <div className="logos flex items-center justify-center space-x-6 md:justify-start">
+        <div className="logos flex items-center justify-center space-x-7 md:justify-start">
           <Link href='https://github.com/medetcandiler' target="_blank">
             <Image
+              className="duration-300 ease-in hover:scale-110"
               src={'/images/github.svg'}
               width={55}
               height={55}
@@ -32,6 +33,7 @@ const About = () => {
           </Link>
           <Link href='https://www.linkedin.com/in/medetcandiler/' target="_blank">
             <Image
+              className="duration-300 ease-in hover:scale-110"
               src={'/images/linkedin.png'}
               width={60}
               height={60}
@@ -39,9 +41,10 @@ const About = () => {
             />
           </Link>
         </div>
-        <div>
-          <p>.. or send me an email at:
-            <a href="mailto:medetdiler1996@gmail.com">medetdiler1996@gmail.com</a>
+        <div className="flex items-center space-x-2">
+          <p>.. or send me an email at</p><span>:</span>
+          <p className="font-medium text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text duration-300 ease-in hover:translate-y-[-3px] hover:opacity-80">
+            <a href="mailto:medetdiler1996@gmail.com"> medetcandiler1996@gmail.com</a>
           </p>
         </div>
       </div>

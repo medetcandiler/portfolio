@@ -3,6 +3,7 @@ import { Roboto  } from 'next/font/google'
 
 import { ReduxProvider } from './redux/provider'
 import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 
 const roboto = Roboto({
   weight: '400',
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
           <div className="app font-serif">
             <Navbar />
             {children}
+            <Footer />
           </div>
         </ReduxProvider>
       </body>
