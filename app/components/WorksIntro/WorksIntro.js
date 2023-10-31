@@ -18,9 +18,9 @@ const WorksIntro = () => {
       <div className="py-6">
         <p className="pb-6">Here are some of the technologies I'm passionate about:</p>
         <div className="flex items-center justify-center flex-wrap gap-10 md:justify-start">
+          <Image src="/images/js.svg" alt="git" width="80" height="80" />
           <Image src="/images/nextjs.svg" alt="nextjs" width="80" height="80" />
           <Image src="/images/react.svg" alt="react" width="80" height="80" />
-          <Image src="/images/js.svg" alt="git" width="80" height="80" />
           <Image src="/images/tailwind.svg" alt="bootstrap" width="80" height="80" />
           <Image src="/images/firebase.png" alt="css3" width="80" height="80" />
           <Image src="/images/redux.svg" alt="git" width="80" height="80" />
