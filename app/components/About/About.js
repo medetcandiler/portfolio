@@ -25,7 +25,7 @@ const About = () => {
           <Link href='https://github.com/medetcandiler' target="_blank">
             <Image
               className="duration-300 ease-in hover:scale-110"
-              src={'/images/github.svg'}
+              src='/images/github.svg'
               width={55}
               height={55}
               alt="github"
@@ -34,7 +34,7 @@ const About = () => {
           <Link href='https://www.linkedin.com/in/medetcandiler/' target="_blank">
             <Image
               className="duration-300 ease-in hover:scale-110"
-              src={'/images/linkedin.png'}
+              src='/images/linkedin.png'
               width={60}
               height={60}
               alt="github"

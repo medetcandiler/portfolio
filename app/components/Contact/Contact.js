@@ -55,36 +55,39 @@ const Contact = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="border border-[#4a2771] p-10 rounded-3xl shadow-[#4a2771] shadow-xl md:p-14 lg:p-20" >
           <div className="mb-4">
             <label
-              htmlFor="password"
+              htmlFor="name"
               className={`text-md font-semibold block md:text-lg ${errors.name && 'text-[#FF0000]'}`}
             >
               Your Name
             </label>
             <input
+              id="name"
               {...register('name')}
               className={`bg-transparent  px-4 py-2 border-b border-black border-opacity-100 focus:outline-none ${errors.name && 'border-[#D40000] text-[#D40000]'}`}
             />
           </div>
           <div className="mb-4">
             <label
-              htmlFor="password"
+              htmlFor="email"
               className={`text-md font-semibold block md:text-lg ${errors.email && 'text-[#D40000]'}`}
             >
               Your Email
             </label>
             <input
+              id="email"
               {...register('email')}
               className={`bg-transparent  px-4 py-2 border-b border-black border-opacity-100 focus:outline-none ${errors.email && 'border-[#D40000] text-[#D40000]'}`}
             />
           </div>
           <div className="mb-4">
             <label
-              htmlFor="password"
+              htmlFor="message"
               className={`text-md font-semibold block md:text-lg ${errors.message && 'text-[#D40000]'}`}
             >
               Your Message
             </label>
             <textarea
+              id="message"
               {...register('message')}
               className={`bg-transparent  px-4 py-2 border-b border-black border-opacity-100 focus:outline-none ${errors.message && 'border-[#D40000] text-[#D40000]'}`}
             />

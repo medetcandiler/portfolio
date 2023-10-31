@@ -24,7 +24,7 @@ const HeroSection = () => {
 
 
   return (
-    <section ref={heroRef} className={`container mx-auto flex h-screen-80 px-6 w-full justify-center items-center space-x-4 transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+    <section ref={heroRef} className={`container mx-auto flex h-screen-80 px-6 w-full justify-center items-center space-x-4 transition ease-in duration-700 ${isVisible ? " translate-y-0 opacity-100" : " -translate-y-5 opacity-0"}`}>
       <div className='left w-full text-center flex flex-col space-y-3 md:space-y-6 md:w-3/5 md:text-start'>
         <h1 className='text-5xl font-bold md:text-6xl lg:text-7xl '>Medetcan Diler</h1>
         <div className=' flex items-center justify-center space-x-2 text-2xl font-medium md:text-2xl md:justify-start lg:text-4xl -mx-6 md:-mx-0 '>

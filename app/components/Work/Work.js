@@ -148,7 +148,7 @@ const Work = ({ text, project }) => {
             <div className="flex items-center space-x-1 text-lg">
               <p className="whitespace-nowrap">Visit at</p>
               <p>:</p>
-              <Link className="link lowercase" href={href} target="blank">www.{project}.com</Link>
+              <Link className="link lowercase" href={href} target="blank" rel="noopener noreferrer" >www.{project}.com</Link>
             </div>
           </div>
           <div>
