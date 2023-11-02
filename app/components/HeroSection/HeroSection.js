@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-
+import { useTranslations } from 'next-intl';
 
 import useIsVisible from '@/app/utils/useIsVisible';
 import { setTurnToNav } from '@/app/redux/features/navSlice';
@@ -13,6 +13,7 @@ const HeroSection = () => {
   const heroRef = useRef();
   const isVisible = useIsVisible(heroRef);
   const dispatch = useDispatch();
+  const t = useTranslations('HeroSection');
 
   useEffect(() => {
     if (isVisible) {
@@ -27,13 +28,13 @@ const HeroSection = () => {
     <section ref={heroRef} >
       <div className={`container mx-auto flex h-screen-80 px-6 w-full justify-center items-center space-x-4`}>
         <div className={`left w-full text-center flex flex-col space-y-3 md:space-y-6 md:w-3/5 md:text-start transition duration-500 ease-in ${isVisible ? 'opacity-1  md:translate-x-0' : 'opacity-0 md:-translate-x-5'}`}>
-          <h1 className='text-4xl font-bold md:text-5xl lg:text-6xl xl:text-7xl'>Medetcan Diler</h1>
+          <h1 className='text-3xl font-bold md:text-4xl lg:text-5xl xl:text-7xl'>Medetcan Diler</h1>
           <div className=' flex items-center justify-center space-x-2 text-2xl font-medium md:text-2xl md:justify-start lg:text-4xl -mx-6 md:-mx-0 '>
-            <p className='whitespace-nowrap'>I am a</p>
+            <p className='whitespace-nowrap'>{t('I am a')}</p>
             <span className='text-[#6b3e99]'>
               <Typewriter
                 options={{
-                  strings: ['Frontend Developer', 'Web Developer', 'Mechanical Engineer'],
+                  strings: [t('Frontend Developer'), t('Web Developer'), t('Mechanical Engineer')],
                   autoStart: true,
                   loop: true,
                 }}
@@ -41,7 +42,7 @@ const HeroSection = () => {
             </span>
           </div>
           <p className='text-md leading-relaxed md:px-0  md:text-lg '>
-            Specializing in frontend development, I deliver efficient solutions with a keen eye for detail and a knack for creative problem-solving. I thrive both independently and in collaborative team settings, dedicated to website development and a commitment to continuous improvement.
+            {t('heroSectionText')}
           </p>
           <div className='pt-1'>
             <Link
@@ -49,7 +50,7 @@ const HeroSection = () => {
               locale={false}
               target='_blank'
             >
-              <button className='cvBtn'>Download CV</button>
+              <button className='cvBtn'>{t('Download CV')}</button>
             </Link>
           </div>
         </div>

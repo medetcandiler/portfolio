@@ -1,0 +1,51 @@
+{
+  "Home": {
+    "givingly": "Givingly, Recoded'deki bitirme projem, web geliştirme yolculuğumdaki önemli bir kilometre taşını simgeliyor. Frontend geliştirici olarak büyüme sürecimi ve ekip çalışması, teknik yetenekler, problem çözme ve sürekli öğrenme kabiliyetimi yansıtıyor. Givingly, bireyleri ve projeleri potansiyel destekçilerin bir topluluğuyla bir araya getirmeyi amaçlayan bir bağış platformudur.",
+    "cineverse": "The Movie Database Projesi, ilgili ve özellik zengini bir film veritabanı web sitesi oluşturmayı hedefleyen işbirlikçi bir çabadır. Yetenekli geliştiriciler ekibiyle yakın işbirliği yapmayı içermekte ve film tutkunları için kapsamlı bir platform oluşturmayı amaçlamaktadır. Bu proje, farklı teknolojileri ve API'ları keşfetmemize ve kullanmamıza izin verdi, böylece dinamik ve kullanıcı dostu bir film deneyimi yaratmayı başardık.",
+    "memeGenerator": "Next.js ve api.imgflip.com API tarafından desteklenen Meme Oluşturucu, frontend geliştirme konusundaki yeteneğimi göstermektedir. Bu Next.js uygulaması, kullanıcıların metin girmesi ve renk seçmesiyle mizahlar oluşturmasına ve önizlemesine olanak tanır. Next.js, API entegrasyonu, Redux Toolkit ile durum yönetimi ve kullanıcı dostu arayüz tasarımındaki becerilerimi sergiliyor. Next.js sunucu tarafı işlemesi ve etkili form işleme için React Hook Form kullanarak bu proje hızlı, duyarlı ve görsel olarak çekici bir kullanıcı deneyimi sunar."
+  },
+  "Navbar": {
+    "work": "İşlerim",
+    "about": "Hakkımda",
+    "lets": "Hadi konuşalım"
+  },
+  "HeroSection": {
+    "I am a": "Ben bir",
+    "heroSectionText": "Ön yüz geliştirme konusunda uzmanlaşmış biriyim, detaylara dikkat eden ve yaratıcı problem çözme yeteneği olan etkili çözümler sunuyorum. Hem bağımsız çalışmayı hem de işbirliği gerektiren takım ortamlarında başarılıyım, web geliştirmeye adanmış ve sürekli iyileşmeye kararlıyım.",
+    "Frontend Developer": "Ön Yüz Geliştiriciyim",
+    "Web Developer": "Web Geliştiriciyim",
+    "Mechanical Engineer": "Makine Mühendisiyim",
+    "Download CV": "Özgeçmişi İndir"
+  },
+  "WorksIntro": {
+    "SomeOfMyWork": "Çalışmalarımdan Bazıları.",
+    "ImThrilledAboutTheCreativeProcessOfBringingIdeasToLifeThroughWebDevelopmentWithABackgroundInMechanicalEngineeringIBringAUniquePerspectiveToFrontendWorkEmphasizingOrganizationSystematicThinkingAndEffectiveProblemSolving": "Fikirleri web geliştirme yoluyla hayata geçirme yaratıcı sürecine bayılıyorum. Mekanik mühendislik geçmişimle, ön yüz işine benzersiz bir bakış açısı getiriyor ve organizasyon, sistemli düşünme ve etkili problem çözme konularına vurgu yapıyorum.",
+    "SpecializingInReactAndNextjsICraftCaptivatingUserInterfacesUtilizingAWideArrayOfModernWebTechnologiesInMyWorkAsAWebDeveloperMyStrongestQualityIsMyOpenMindednessAndCuriosityWhichIBringToEveryProjectTheseQualitiesDriveMeToAnalyzeAndSolveComplexProblemsWithTechnology": "React ve Next.js konusunda uzmanlaşmış olarak, büyük bir modern web teknolojileri yelpazesini kullanarak etkileyici kullanıcı arayüzleri oluşturuyorum. Web geliştirici olarak en güçlü özelliğim açık fikirlilik ve merakımdır, bu özellikleri her projeye getiriyorum. Bu özellikler, teknoloji ile karmaşık sorunları analiz etme ve çözme konusundaki beni yönlendirir.",
+    "HereAreSomeOfTheTechnologiesImPassionateAbout": "İlgili olduğum bazı teknolojiler:",
+    "BelowYoullFindDescriptionsAndLinksToSomeOfTheProjectsIveHadThePleasureOfWorkingOnEachSectionWillSpecifyWhetherItsAPersonalProjectOrOneIveDevelopedAsPartOfTheTechnologyCompanyICoFoundedSomethingNew": "Aşağıda, üzerinde çalışmaktan mutluluk duyduğum bazı projelerin açıklamalarını ve bağlantılarını bulacaksınız. Her bölüm, kişisel bir proje olup olmadığını veya SomethingNew adlı teknoloji şirketinin kurucu ortağı olarak geliştirdiğim projeleri belirtecektir."
+  },
+  "Work": {
+    "VisitAt": "Ziyaret et"
+  },
+  "About": {
+    "HeyThere": "Merhaba!",
+    "ImAFrontendDeveloperWithAPassionForCreatingCaptivatingWebExperiences": "Ben, etkileyici web deneyimleri oluşturma tutkusu olan bir Ön Yüz Geliştiriciyim.",
+    "AfterWorkingAsAnEngineerInTheFieldForSeveralMonthsIRealizedThatMyTrueCallingLayInWebDevelopmentIveAlwaysBeenDrawnToCodingSoftwareAndComputersAndIDecidedToMakeACareerChangeToPursueMyPassion": "Birkaç ay boyunca alanda mühendis olarak çalıştıktan sonra, gerçek çağrımın web geliştirmede olduğunu fark ettim. Her zaman kodlamaya, yazılıma ve bilgisayarlara çekildim ve tutkumu takip etmek için kariyer değişikliği yapmaya karar verdim.",
+    "ISuccessfullyCompletedA6MonthImmersiveWebDevelopmentBootcampAtReCodedThisComprehensiveProgramEquippedMeWith500HoursOfHandsonLearningAndProjectBasedExperienceReinforcingMyPassionForWebDevelopment": "Re:Coded'da 6 ay süren yoğun bir web geliştirme bootcamp'ini başarıyla tamamladım. Bu kapsamlı program, bana 500+ saatlik uygulamalı öğrenme ve projeye dayalı deneyim sağladı ve web geliştirme tutkumu pekiştirdi.",
+    "WithABackgroundInMechanicalEngineeringIBringAUniquePerspectiveToMyFrontendWorkMyEngineeringEducationHasTaughtMeTheValueOfOrganizationSystematicThinkingAndEffectiveProblemSolving": "Mekanik Mühendislik geçmişine sahip olarak, ön yüz işime benzersiz bir bakış açısı getiriyorum. Mühendislik eğitimim bana organizasyonun, sistemli düşünmenin ve etkili problem çözmenin değerini öğretti.",
+    "YouCanFindMeOn": "Beni şurada bulabilirsiniz:",
+    "OrSendMeAnEmailAt": "veya bana bir e-posta gönderin",
+    "DownloadCV": "Özgeçmişi İndir"
+  },
+  "Contact": {
+    "ConnectWithMe": "Benimle İletişime Geçin",
+    "LetsCollaborate": "İşbirliği Yapalım",
+    "YourName": "Adınız",
+    "YourEmail": "E-postanız",
+    "YourMessage": "Mesajınız",
+    "SendMessage": "Mesaj Gönder"
+  },
+  "Footer": {
+    "AllRightsReserved": "Tüm hakları saklıdır"
+  }
+}

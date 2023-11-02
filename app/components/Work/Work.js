@@ -1,9 +1,9 @@
 'use client'
+import Image from "next/image"
 import useIsVisible from "@/app/utils/useIsVisible";
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
-
+import { useTranslations } from "next-intl";
 
 const Work = ({ text, project }) => {
   const [imageSrc, setImageSrc] = useState('');
@@ -11,6 +11,8 @@ const Work = ({ text, project }) => {
   const [href, setHref] = useState('');
   const firstRef = useRef();
   const isVisible = useIsVisible(firstRef);
+
+  const t = useTranslations('Work');
 
   useEffect(() => {
     if (project === 'givingly') {
@@ -52,7 +54,7 @@ const Work = ({ text, project }) => {
           alt="firebase logo"
         />,
       ]);
-      setHref('https://crowdfunding-app-team-9-akej.vercel.app/')
+      setHref('https://crowdfunding-app-team-9-akej.vercel.app/');
     } else if (project === 'cineverse') {
       setImageSrc('movie.svg');
       setTools([
@@ -127,8 +129,7 @@ const Work = ({ text, project }) => {
       ]);
       setHref('https://meme-generator-git-main-medetcandiler.vercel.app/');
     }
-  }, [project])
-
+  }, [project]);
 
   return (
     <div ref={firstRef} className={`container mx-auto leading-relaxed text-md md:text-lg`}>
@@ -146,7 +147,7 @@ const Work = ({ text, project }) => {
               <h1 className="text-2xl font-bold capitalize md:text-4xl ">{project}</h1>
             </div>
             <div className="flex items-center space-x-1 text-lg">
-              <p className="whitespace-nowrap">Visit at</p>
+              <p className="whitespace-nowrap">{t('VisitAt')}</p>
               <p>:</p>
               <Link className="link lowercase" href={href} target="blank" rel="noopener noreferrer" >www.{project}.com</Link>
             </div>

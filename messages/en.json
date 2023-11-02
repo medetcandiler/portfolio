@@ -1,0 +1,51 @@
+{ 
+  "Home":{
+    "givingly":"Givingly, my capstone project at Recoded, signifies a pivotal milestone in my web development journey. It reflects my growth as a frontend developer and my ability to create user-centric web applications through teamwork, technical proficiency, problem-solving, and continuous learning. Givingly is a crowdfunding platform that aims to connect individuals and projects with a community of potential backers.",
+    "cineverse":"The Movie Database Project is a collaborative effort that aimed to create an engaging and feature-rich movie database website. It involved working closely with a team of skilled developers to build a comprehensive platform for movie enthusiasts and cinephiles. This project allowed us to explore and utilize various technologies and APIs to create a dynamic and user-friendly movie-related experience.",
+    "memeGenerator":"Meme Generator, powered by Next.js and the api.imgflip.com API, demonstrates my proficiency in frontend development. This Next.js application lets users create and preview memes by entering text and selecting colors. It showcases my skills in Next.js, API integration, data fetching, state management with Redux Toolkit, and user-friendly interface design. Utilizing Next.js server-side rendering and React Hook Form for efficient form handling, this project provides a fast, responsive, and visually appealing user experience."
+  },
+  "Navbar":{
+    "work": "Work",
+    "about":"About",
+    "lets":"Let's talk"
+  },
+  "HeroSection": {
+    "I am a": "I am a",
+    "heroSectionText": "Specializing in frontend development, I deliver efficient solutions with a keen eye for detail and a knack for creative problem-solving. I thrive both independently and in collaborative team settings, dedicated to website development and a commitment to continuous improvement.",
+    "Frontend Developer":"Frontend Developer",
+    "Web Developer":"Web Developer",
+    "Mechanical Engineer":"Mechanical Engineer",
+    "Download CV": "Download CV"
+  },
+  "WorksIntro": {
+    "SomeOfMyWork": "Some of my work.",
+    "ImThrilledAboutTheCreativeProcessOfBringingIdeasToLifeThroughWebDevelopmentWithABackgroundInMechanicalEngineeringIBringAUniquePerspectiveToFrontendWorkEmphasizingOrganizationSystematicThinkingAndEffectiveProblemSolving": "I'm thrilled about the creative process of bringing ideas to life through web development. With a background in mechanical engineering, I bring a unique perspective to frontend work, emphasizing organization, systematic thinking, and effective problem-solving.",
+    "SpecializingInReactAndNextjsICraftCaptivatingUserInterfacesUtilizingAWideArrayOfModernWebTechnologiesInMyWorkAsAWebDeveloperMyStrongestQualityIsMyOpenMindednessAndCuriosityWhichIBringToEveryProjectTheseQualitiesDriveMeToAnalyzeAndSolveComplexProblemsWithTechnology": "Specializing in React and Next.js, I craft captivating user interfaces, utilizing a wide array of modern web technologies. In my work as a web developer, my strongest quality is my open-mindedness and curiosity, which I bring to every project. These qualities drive me to analyze and solve complex problems with technology.",
+    "HereAreSomeOfTheTechnologiesImPassionateAbout": "Here are some of the technologies I'm passionate about:",
+    "BelowYoullFindDescriptionsAndLinksToSomeOfTheProjectsIveHadThePleasureOfWorkingOnEachSectionWillSpecifyWhetherItsAPersonalProjectOrOneIveDevelopedAsPartOfTheTechnologyCompanyICoFoundedSomethingNew": "Below, you'll find descriptions and links to some of the projects I've had the pleasure of working on. Each section will specify whether it's a personal project or one I've developed as part of the technology company I co-founded, SomethingNew."
+  },
+  "Work": {
+    "VisitAt": "Visit at"
+  },
+  "About": {
+    "HeyThere": "Hey there!",
+    "ImAFrontendDeveloperWithAPassionForCreatingCaptivatingWebExperiences": "I'm a Frontend Developer with a passion for creating captivating web experiences.",
+    "AfterWorkingAsAnEngineerInTheFieldForSeveralMonthsIRealizedThatMyTrueCallingLayInWebDevelopmentIveAlwaysBeenDrawnToCodingSoftwareAndComputersAndIDecidedToMakeACareerChangeToPursueMyPassion": "After working as an engineer in the field for several months, I realized that my true calling lay in web development. I've always been drawn to coding, software, and computers, and I decided to make a career change to pursue my passion.",
+    "ISuccessfullyCompletedA6MonthImmersiveWebDevelopmentBootcampAtReCodedThisComprehensiveProgramEquippedMeWith500HoursOfHandsonLearningAndProjectBasedExperienceReinforcingMyPassionForWebDevelopment": "I successfully completed a 6-month immersive web development bootcamp at Re:Coded. This comprehensive program equipped me with 500+ hours of hands-on learning and project-based experience, reinforcing my passion for web development.",
+    "WithABackgroundInMechanicalEngineeringIBringAUniquePerspectiveToMyFrontendWorkMyEngineeringEducationHasTaughtMeTheValueOfOrganizationSystematicThinkingAndEffectiveProblemSolving": "With a background in Mechanical Engineering, I bring a unique perspective to my frontend work. My engineering education has taught me the value of organization, systematic thinking, and effective problem-solving.",
+    "YouCanFindMeOn": "You can find me on:",
+    "OrSendMeAnEmailAt": "or send me an email at",
+    "DownloadCV": "Download CV"
+  },
+  "Contact": {
+    "ConnectWithMe": "Connect With Me",
+    "LetsCollaborate": "Let's Collaborate",
+    "YourName": "Your Name",
+    "YourEmail": "Your Email",
+    "YourMessage": "Your Message",
+    "SendMessage": "Send Message"
+  },
+  "Footer": {
+    "AllRightsReserved": "All rights reserved"
+  }
+}
