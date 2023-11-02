@@ -8,7 +8,7 @@ const WorksIntro = () => {
   const isVisible = useIsVisible(workRef)
   return (
     <section id="work" ref={workRef} >
-      <div className={`container mx-auto mt-[1px] flex flex-col justify-center leading-relaxed text-sm text-center pb-28 px-6 transition-all ease-in-out duration-700 ${isVisible ? "opacity-100 translaye-y-0" : "opacity-0 -translate-y-5"}  md:text-start md:text-lg`}>
+      <div className={`container mx-auto mt-[1px] flex flex-col justify-center leading-relaxed text-sm text-center pb-28 px-6 transition-all ease-in-out duration-300 ${isVisible ? "opacity-100 translaye-y-0" : "opacity-0 -translate-y-5"}  md:text-start md:text-lg`}>
         <h3 className="text-4xl font-bold pb-4 md:text-6xl md:pb-6 ">Some of my work.</h3>
         <div className="flex flex-col space-y-4 text-md md:space-y-6">
           <p>I'm thrilled about the creative process of bringing ideas to life through web development. With a background in mechanical engineering, I bring a unique perspective to frontend work, emphasizing organization, systematic thinking, and effective problem-solving.</p>
