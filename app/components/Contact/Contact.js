@@ -44,61 +44,63 @@ const Contact = () => {
   const isVisible = useIsVisible(contactRef);
 
   return (
-    <div id="let" ref={contactRef} className={`relative py-28 flex flex-col space-y-12 justify-center md:h-screen md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-0 transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-      <div className="flex justify-center items-center">
-        <div className="flex flex-col text-center md:text-start">
-          <h1 className="text-xl font-semibold text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-2xl">Connect With Me</h1>
-          <h2 className="text-4xl sm:text-5xl text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-6xl lg:whitespace-nowrap lg:text-7xl">Let's Collaborate</h2>
+    <div id="let" ref={contactRef} >
+      <div className={`relative py-28 flex flex-col space-y-12 justify-center md:h-screen md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-0`}>
+        <div className={`flex justify-center items-center transition-all duration-700 ease-in-out ${isVisible ? 'opacity-1 translate-y-0 md:translate-x-0' : 'opacity-0 -translate-y-5 md:-translate-x-5 md:translate-y-0'}`}>
+          <div className="flex flex-col text-center md:text-start">
+            <h1 className="text-xl font-semibold text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-2xl">Connect With Me</h1>
+            <h2 className="text-4xl sm:text-5xl text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-6xl lg:whitespace-nowrap lg:text-7xl">Let's Collaborate</h2>
+          </div>
         </div>
-      </div>
-      <div className='right flex justify-center text-center md:w-1/2 md:text-start'>
-        <form onSubmit={handleSubmit(onSubmit)} className="border border-[#4a2771] p-10 rounded-3xl shadow-[#4a2771] shadow-xl md:p-14 lg:p-20" >
-          <div className="mb-4">
-            <label
-              htmlFor="name"
-              className={`text-md font-semibold block md:text-lg ${errors.name && 'text-[#FF0000]'}`}
-            >
-              Your Name
-            </label>
-            <input
-              id="name"
-              {...register('name')}
-              className={`bg-transparent  px-4 py-2 border-b border-black border-opacity-100 focus:outline-none ${errors.name && 'border-[#D40000] text-[#D40000]'}`}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className={`text-md font-semibold block md:text-lg ${errors.email && 'text-[#D40000]'}`}
-            >
-              Your Email
-            </label>
-            <input
-              id="email"
-              {...register('email')}
-              className={`bg-transparent  px-4 py-2 border-b border-black border-opacity-100 focus:outline-none ${errors.email && 'border-[#D40000] text-[#D40000]'}`}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="message"
-              className={`text-md font-semibold block md:text-lg ${errors.message && 'text-[#D40000]'}`}
-            >
-              Your Message
-            </label>
-            <textarea
-              id="message"
-              {...register('message')}
-              className={`bg-transparent  px-4 py-2 border-b border-black border-opacity-100 focus:outline-none ${errors.message && 'border-[#D40000] text-[#D40000]'}`}
-            />
-          </div>
-          <div className="flex justify-center md:justify-start">
-            <button type="submit" className="cvBtn flex items-center ">
-              {isSending && <Spinner />} Send Message
-            </button>
-          </div>
-        </form>
-        <Toast message={'Message delivered successfully.'} isShowToast={isShowToast} setIsShowToast={setIsShowToast} />
+        <div className={`right flex justify-center text-center md:w-1/2 md:text-start transition-all duration-700 ease-in-out ${isVisible ? 'opacity-1 translate-y-0 md:translate-x-0' : 'opacity-0 -translate-y-5 md:translate-x-5 md:translate-y-0'}`}>
+          <form onSubmit={handleSubmit(onSubmit)} className="border border-[#4a2771] p-10 rounded-3xl shadow-[#4a2771] shadow-xl md:p-14 lg:p-20" >
+            <div className="mb-4">
+              <label
+                htmlFor="name"
+                className={`text-md font-semibold block md:text-lg ${errors.name && 'text-[#D40000]'}`}
+              >
+                Your Name
+              </label>
+              <input
+                id="name"
+                {...register('name')}
+                className={`bg-transparent  px-4 py-2 border-b border-black border-opacity-100 focus:outline-none ${errors.name && 'border-[#D40000] text-[#D40000]'}`}
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="email"
+                className={`text-md font-semibold block md:text-lg ${errors.email && 'text-[#D40000]'}`}
+              >
+                Your Email
+              </label>
+              <input
+                id="email"
+                {...register('email')}
+                className={`bg-transparent  px-4 py-2 border-b border-black border-opacity-100 focus:outline-none ${errors.email && 'border-[#D40000] text-[#D40000]'}`}
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="message"
+                className={`text-md font-semibold block md:text-lg ${errors.message && 'text-[#D40000]'}`}
+              >
+                Your Message
+              </label>
+              <textarea
+                id="message"
+                {...register('message')}
+                className={`bg-transparent  px-4 py-2 border-b border-black border-opacity-100 focus:outline-none ${errors.message && 'border-[#D40000] text-[#D40000]'}`}
+              />
+            </div>
+            <div className="flex justify-center md:justify-start">
+              <button type="submit" className="cvBtn flex items-center ">
+                {isSending && <Spinner />} Send Message
+              </button>
+            </div>
+          </form>
+          <Toast message={'Message delivered successfully.'} isShowToast={isShowToast} setIsShowToast={setIsShowToast} />
+        </div>
       </div>
     </div>
   )
