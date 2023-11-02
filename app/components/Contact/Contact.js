@@ -46,13 +46,13 @@ const Contact = () => {
   return (
     <div id="let" ref={contactRef} >
       <div className={`relative py-28 flex flex-col space-y-12 justify-center md:h-screen md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-0`}>
-        <div className={`flex justify-center items-center transition-all duration-500 ease-in ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 -translate-y-5 md:-translate-x-5'}`}>
+        <div className={`flex justify-center items-center transition duration-500 ease-in ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 -translate-y-5 md:-translate-x-5'}`}>
           <div className="flex flex-col text-center md:text-start">
             <h1 className="text-xl font-semibold text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-2xl">Connect With Me</h1>
             <h2 className="text-4xl sm:text-5xl text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-6xl lg:whitespace-nowrap lg:text-7xl">Let's Collaborate</h2>
           </div>
         </div>
-        <div className={`right flex justify-center text-center md:w-1/2 md:text-start transition-all duration-500 ease-in ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 -translate-y-5 md:translate-x-5'}`}>
+        <div className={`right flex justify-center text-center md:w-1/2 md:text-start transition duration-500 ease-in ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 -translate-y-5 md:translate-x-5'}`}>
           <form onSubmit={handleSubmit(onSubmit)} className="border border-[#4a2771] p-10 rounded-3xl shadow-[#4a2771] shadow-xl md:p-14 lg:p-20" >
             <div className="mb-4">
               <label
