@@ -31,7 +31,7 @@ const HamburgerMenu = () => {
         <div className={styles.bar3}></div>
       </div>
       <div className={`absolute ease-in duration-300 left-0 w-full transition-all ${showMobileNav ? 'opacity-100 translaye-y-0' : 'opacity-0 -translate-y-1'}`}>
-        <div className="flex flex-col items-center space-y-1.5 ">
+        <div className="flex flex-col items-center text-sm space-y-1.5 ">
           <button onClick={e => scrollToSection(e)}>Work</button>
           <button onClick={e => scrollToSection(e)}>About</button>
           <button onClick={e => scrollToSection(e)}>Let's talk</button>
