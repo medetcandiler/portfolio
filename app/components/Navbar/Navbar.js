@@ -27,7 +27,7 @@ const Navbar = () => {
     })
   }
   return (
-    <header className="relative container mx-auto flex justify-between items-center h-[80px] z-50">
+    <header className="relative container mx-auto px-8 flex justify-between items-center h-[80px] z-50 md:px-0">
       <div className="left">
         <Image
           className="cursor-pointer"
