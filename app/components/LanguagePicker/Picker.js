@@ -19,7 +19,7 @@ const LanguagePicker = ({ handleLocaleChange, selectedLang }) => {
 
   return (
     <div
-      className="fixed z-50 top-[29px] right-6 md:top-6 md:right-5 lg:right-7 xl:right-16"
+      className="fixed z-50 top-[29px] right-6 md:right-5 lg:right-7 xl:right-16"
     >
       <button
         className=" cursor-pointer mb-3"
