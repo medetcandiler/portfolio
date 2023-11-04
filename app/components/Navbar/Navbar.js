@@ -1,11 +1,14 @@
 'use client'
 import Image from "next/image";
 import { startTransition } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+import LanguagePicker from "../LanguagePicker/Picker";
 
 const Navbar = () => {
+  const [selectedLang, setSelectedLang] = useState('en');
   const t = useTranslations('Navbar');
   const scrollToSection = (e) => {
     const section = e.target.textContent.split(`'`)[0].toLowerCase();
@@ -15,6 +18,13 @@ const Navbar = () => {
         workSection.scrollIntoView({ behavior: "smooth" });
       }
     }
+  }
+
+  const handleLocaleChange = (lang) => {
+    setSelectedLang(lang);
+    startTransition(() => {
+      window.location.href = `/${lang}`
+    })
   }
   return (
     <header className="relative container mx-auto flex justify-between items-center h-[80px] z-50">
@@ -27,7 +37,7 @@ const Navbar = () => {
           alt="logo"
         />
       </div>
-      <div className="hidden right  space-x-8 text-[17px] font-semibold md:flex">
+      <div className="hidden right  space-x-8 text-[16px] font-semibold md:flex">
         <button onClick={e => scrollToSection(e)} className="link">{t('work')}</button>
         <button onClick={e => scrollToSection(e)} className="link">{t('about')}</button>
         <button onClick={e => scrollToSection(e)} className="link">{t('lets')}</button>
@@ -35,19 +45,7 @@ const Navbar = () => {
       <section className="md:hidden">
         <HamburgerMenu />
       </section>
-      <div className="absolute left-1/2 flex space-x-3">
-        <button onClick={(e) => {
-          console.log(e.target.textContent);
-          startTransition(() => {
-            window.location.href = `/${e.target.textContent}`
-          })
-        }}>tr</button>
-        <button onClick={(e) => {
-            startTransition(() => {
-              window.location.href = `/${e.target.textContent}`
-            })
-        }}>en</button>
-      </div>
+      <LanguagePicker selectedLang={selectedLang} handleLocaleChange={handleLocaleChange} />
     </header>
   )
 }
