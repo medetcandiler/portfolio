@@ -54,7 +54,7 @@ const HeroSection = () => {
             </Link>
           </div>
         </div>
-        <div className={`hidden right w-2/5 -mt-36 md:flex md:justify-center md:items-center transition duration-500 ease-in-out ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 -translate-y-5 md:translate-x-5'}`}>
+        <div className={`hidden right w-2/5 -mt-36 md:flex md:justify-center md:items-center transition duration-500 ease-in-out ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:translate-x-5'}`}>
           <Image
             className='rounded'
             src='/images/profile.png'
