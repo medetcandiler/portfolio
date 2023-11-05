@@ -110,7 +110,7 @@ const Contact = () => {
               </label>
             </div>
             <div className="flex justify-center md:justify-start">
-              <button type="submit" className="cvBtn flex items-center ">
+              <button type="submit" className="cvBtn flex items-center z-50">
                 {isSending && <Spinner />} {t('SendMessage')}
               </button>
             </div>

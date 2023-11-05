@@ -3,10 +3,9 @@ const Toast = ({ message, isShowToast, setIsShowToast }) => {
     setIsShowToast(false);
   };
   return (
-    <div>
       <div
         id="toast-success"
-        className={`absolute  bottom-0 left-1/2 -translate-x-1/2 flex items-center p-4 mb-4 bg-transparent rounded-lg shadow shadow-[#4a2771] transition-opacity ease-in duration-500 ${isShowToast ? "opacity-100" : "opacity-0"} md:bottom-5 md:left-5 md:translate-x-0`}
+        className={`absolute flex items-center p-2.5 mb-4 bg-transparent rounded-lg shadow shadow-[#4a2771] transition-opacity ease-in duration-500 ${isShowToast ? "opacity-100" : "opacity-0"} md:bottom-5 md:left-5 md:translate-x-0`}
         role="alert"
       >
         <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-amber-600 bg-[#4a2771] rounded-lg">
@@ -49,7 +48,7 @@ const Toast = ({ message, isShowToast, setIsShowToast }) => {
           </svg>
         </button>
       </div>
-    </div>
+
   );
 };
 

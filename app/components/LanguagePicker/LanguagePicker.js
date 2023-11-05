@@ -19,7 +19,7 @@ const LanguagePicker = ({ handleLocaleChange, selectedLang }) => {
 
   return (
     <div
-      className="absolute top-1/2 -translate-y-1/2 right-6 md:right-5 lg:-right-10 xl:-right-16"
+      className="absolute mt-2 -right-2 md:-right-8 lg:-right-10 xl:-right-16"
     >
       <button
         className=" cursor-pointer mb-3"
