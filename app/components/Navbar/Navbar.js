@@ -21,6 +21,8 @@ const Navbar = () => {
   }
 
   const handleLocaleChange = (lang) => {
+    console.log('lang', lang)
+    console.log('selectedLang', selectedLang)
     setSelectedLang(lang);
     startTransition(() => {
       window.location.href = `/${lang}`
