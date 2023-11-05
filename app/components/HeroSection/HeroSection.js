@@ -61,6 +61,7 @@ const HeroSection = () => {
             width={400}
             height={400}
             alt='profile picture'
+            priority
           />
         </div>
       </div>

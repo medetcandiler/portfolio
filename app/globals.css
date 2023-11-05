@@ -15,6 +15,10 @@
   .cvBtn {
     @apply bg-[#6b3e99] px-4 py-3 rounded duration-300 ease-in text-[#fafafa] hover:bg-[#4a2771] hover:-translate-y-[3px]
   }
+
+  .bg-tr {
+    background-image: url('../public/images/tr.svg');
+  }
 }
 
 .main {

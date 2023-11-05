@@ -1,8 +1,9 @@
 'use client'
 import Image from "next/image";
-import { useState, startTransition } from "react";
+import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 
+import LanguagePicker from "../LanguagePicker/LanguagePicker";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 
 const Navbar = () => {
@@ -17,11 +18,10 @@ const Navbar = () => {
       }
     }
   };
-  console.log(locale)
-  const handleLocaleChange = (e) => {
-    const newLang = e.target.value;
-    setSelectedLang(newLang);
-    window.location.href = `/${newLang}`
+
+  const handleLocaleChange = (lang) => {
+    setSelectedLang(lang);
+    window.location.href = `/${lang}`
   };
 
   return (
@@ -43,12 +43,8 @@ const Navbar = () => {
       <section className="md:hidden">
         <HamburgerMenu />
       </section>
-      <div className="fixed z-50 top-[26px] right-6 md:top-6 md:right-5 lg:right-7 xl:right-16">
-        <select className="bg-transparent" value={selectedLang} onChange={handleLocaleChange} name="picker">
-          <option value="tr">tr</option>
-          <option value="en">en</option>
-        </select>
-      </div>
+
+      <LanguagePicker handleLocaleChange={handleLocaleChange} selectedLang={selectedLang} />
     </header>
   )
 }
