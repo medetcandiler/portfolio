@@ -3,14 +3,13 @@ import Image from "next/image"
 import { useRef } from "react"
 import Link from "next/link"
 import useIsVisible from "@/app/utils/useIsVisible"
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const About = () => {
   const aboutRef = useRef();
   const isVisible = useIsVisible(aboutRef);
-
   const t = useTranslations('About');
-
+  const locale = useLocale();
   return (
     <section ref={aboutRef}>
       <div className={` flex flex-col items-center space-y-6 px-6 md:flex-row md:space-y-0 md:space-x-10 `}>
@@ -64,7 +63,7 @@ const About = () => {
             </div>
             <div className="">
               <Link
-                href='/medetcandilercv.pdf'
+                href={locale === 'tr' ? '/medetcandilercvtr.pdf' : '/medetcandilercv.pdf'}
                 locale={false}
                 target="_blank"
               >

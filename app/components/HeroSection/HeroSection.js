@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 import useIsVisible from '@/app/utils/useIsVisible';
 import { setTurnToNav } from '@/app/redux/features/navSlice';
@@ -14,15 +14,14 @@ const HeroSection = () => {
   const isVisible = useIsVisible(heroRef);
   const dispatch = useDispatch();
   const t = useTranslations('HeroSection');
-
+  const locale = useLocale();
   useEffect(() => {
     if (isVisible) {
       dispatch(setTurnToNav(false));
     } else {
       dispatch(setTurnToNav(true));
     }
-  }, [isVisible])
-
+  }, [isVisible]);
 
   return (
     <section ref={heroRef} >
@@ -46,7 +45,7 @@ const HeroSection = () => {
           </p>
           <div className='pt-1'>
             <Link
-              href='/medetcandilercv.pdf'
+              href={locale === 'tr' ? '/medetcandilercvtr.pdf' : '/medetcandilercv.pdf'}
               locale={false}
               target='_blank'
             >
