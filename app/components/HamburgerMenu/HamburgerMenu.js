@@ -12,8 +12,7 @@ const HamburgerMenu = () => {
   const handleHamClick = () => {
     dispatch(setShowMobileNav());
   };
-  const scrollToSection = (e) => {
-    const section = e.target.textContent.split(`'`)[0].toLowerCase();
+  const scrollToSection = (section) => {
     if (typeof document !== "undefined") {
       const workSection = document.getElementById(`${section}`);
       if (workSection) {
@@ -31,9 +30,9 @@ const HamburgerMenu = () => {
       </div>
       <div className={`absolute ease-in duration-300 left-0 w-full transition-all ${showMobileNav ? 'opacity-100 translaye-y-0' : 'opacity-0 -translate-y-1'}`}>
         <div className="flex flex-col items-center text-sm space-y-1.5 ">
-          <button onClick={e => scrollToSection(e)}>{t('work')}</button>
-          <button onClick={e => scrollToSection(e)}>{t('about')}</button>
-          <button onClick={e => scrollToSection(e)}>{t('lets')}</button>
+          <button onClick={e => scrollToSection('work')}>{t('work')}</button>
+          <button onClick={e => scrollToSection('about')}>{t('about')}</button>
+          <button onClick={e => scrollToSection('let')}>{t('lets')}</button>
         </div>
       </div>
     </section>
