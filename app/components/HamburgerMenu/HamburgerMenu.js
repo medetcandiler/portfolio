@@ -1,17 +1,17 @@
 'use client'
 import { useDispatch, useSelector } from "react-redux";
 import { setShowMobileNav } from "@/app/redux/features/navSlice";
+import { useTranslations } from "next-intl";
 
 import styles from './HamburgerMenu.module.css'
 
 const HamburgerMenu = () => {
   const showMobileNav = useSelector(state => state.nav.showMobileNav);
   const dispatch = useDispatch();
+  const t = useTranslations('Navbar');
   const handleHamClick = () => {
     dispatch(setShowMobileNav());
-  }
-
-
+  };
   const scrollToSection = (e) => {
     const section = e.target.textContent.split(`'`)[0].toLowerCase();
     if (typeof document !== "undefined") {
@@ -21,8 +21,7 @@ const HamburgerMenu = () => {
       }
     }
     dispatch(setShowMobileNav())
-  }
-
+  };
   return (
     <section className="hamburger">
       <div className={`${styles.container} ${showMobileNav && styles.change}`} onClick={handleHamClick}>
@@ -32,9 +31,9 @@ const HamburgerMenu = () => {
       </div>
       <div className={`absolute ease-in duration-300 left-0 w-full transition-all ${showMobileNav ? 'opacity-100 translaye-y-0' : 'opacity-0 -translate-y-1'}`}>
         <div className="flex flex-col items-center text-sm space-y-1.5 ">
-          <button onClick={e => scrollToSection(e)}>Work</button>
-          <button onClick={e => scrollToSection(e)}>About</button>
-          <button onClick={e => scrollToSection(e)}>Let's talk</button>
+          <button onClick={e => scrollToSection(e)}>{t('work')}</button>
+          <button onClick={e => scrollToSection(e)}>{t('about')}</button>
+          <button onClick={e => scrollToSection(e)}>{t('lets')}</button>
         </div>
       </div>
     </section>
