@@ -27,10 +27,10 @@ const HeroSection = () => {
     <section ref={heroRef} >
       <div className={`container mx-auto flex h-screen-80 px-6 w-full justify-center items-center space-x-4`}>
         <div className={`left w-full text-center flex flex-col space-y-3 md:space-y-6 md:w-3/5 md:text-start transition duration-500 ease-in ${isVisible ? 'opacity-1  md:translate-x-0' : 'opacity-0 md:-translate-x-5'}`}>
-          <h1 className='text-3xl font-bold md:text-4xl lg:text-5xl xl:text-7xl'>Medetcan Diler</h1>
-          <div className=' flex items-center justify-center space-x-2 text-xl font-medium md:justify-start md:text-2xl lg:text-4xl -mx-6 md:-mx-0 '>
+          <h1 className='text-4xl font-bold lg:text-5xl xl:text-7xl'>Medetcan Diler</h1>
+          <div className=' flex items-center justify-center space-x-2 font-medium md:justify-start text-2xl lg:text-4xl -mx-6 md:-mx-0 '>
             <p className='whitespace-nowrap'>{t('I am a')}</p>
-            <span className='text-[#6b3e99] dark:text-[#8a5dbd]'>
+            <span className='text-[#6b3e99] dark:text-[#9274c4]'>
               <Typewriter
                 options={{
                   strings: [t('Frontend Developer'), t('Web Developer'), t('Mechanical Engineer')],

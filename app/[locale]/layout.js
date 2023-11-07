@@ -33,7 +33,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   }
   return (
     <html className='scroll-smooth' lang={locale}>
-      <body className={`${roboto.className} transition duration-300 dark:bg-[#000] dark:text-white `}>
+      <body className={`${roboto.className} transition duration-300 dark:bg-[#000] dark:text-[#f2f2f2] `}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ReduxProvider>
             <Background />

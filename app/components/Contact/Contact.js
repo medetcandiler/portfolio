@@ -59,7 +59,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
-                className={`block py-2.5 px-0 w-full md:w-[200px]  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000]' : 'border-black dark:border-slate-100'
+                className={`block py-2.5 px-0 w-full md:w-[200px]  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000] dark:border-[#FF8080]' : 'border-black dark:border-slate-100'
                   }`}
                 placeholder=" "
                 {...register("name")}
@@ -67,7 +67,7 @@ const Contact = () => {
               />
               <label
                 htmlFor="name"
-                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 md:text-lg ${errors.name && "peer-focus:text-[#D40000] text-[#D40000]"
+                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 md:text-lg ${errors.name && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
                   }`}
               >
                 {t('YourName')}
@@ -77,7 +77,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="email"
-                className={`block py-2.5 px-0 w-full  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000]' : 'border-black dark:border-slate-100'
+                className={`block py-2.5 px-0 w-full  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000] dark:border-[#FF8080]' : 'border-black dark:border-slate-100'
                   }`}
                 placeholder=" "
                 {...register("email")}
@@ -85,7 +85,7 @@ const Contact = () => {
               />
               <label
                 htmlFor="email"
-                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 md:text-lg ${errors.name && "peer-focus:text-[#D40000] text-[#D40000]"
+                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 md:text-lg ${errors.name && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
                   }`}
               >
                 {t('YourEmail')}
@@ -95,7 +95,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="message"
-                className={`block py-2.5 px-0 w-full  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000]' : 'border-black dark:border-slate-100'
+                className={`block py-2.5 px-0 w-full  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000] dark:border-[#FF8080]' : 'border-black dark:border-slate-100'
                   }`}
                 placeholder=" "
                 {...register("message")}
@@ -103,7 +103,7 @@ const Contact = () => {
               />
               <label
                 htmlFor="message"
-                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 md:text-lg ${errors.name && "peer-focus:text-[#D40000] text-[#D40000]"
+                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 md:text-lg ${errors.name && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
                   }`}
               >
                 {t('YourMessage')}

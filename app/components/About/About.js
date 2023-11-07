@@ -4,8 +4,10 @@ import { useRef } from "react"
 import Link from "next/link"
 import useIsVisible from "@/app/utils/useIsVisible"
 import { useTranslations, useLocale } from "next-intl";
+import { useSelector } from "react-redux"
 
 const About = () => {
+  const isDark = useSelector(state => state.nav.isDark);
   const aboutRef = useRef();
   const isVisible = useIsVisible(aboutRef);
   const t = useTranslations('About');
@@ -24,7 +26,7 @@ const About = () => {
             <Link href='https://github.com/medetcandiler' target="_blank">
               <Image
                 className="duration-300 ease-in hover:scale-110 text-red-300"
-                src='/images/github.svg'
+                src={isDark ? '/images/githubwhite.png' : '/images/github.svg'}
                 width={55}
                 height={55}
                 alt="github"
