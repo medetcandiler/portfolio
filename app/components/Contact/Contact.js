@@ -49,17 +49,17 @@ const Contact = () => {
       <div className={`relative py-28 flex flex-col space-y-12 justify-center md:h-screen md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-0`}>
         <div className={`flex justify-center items-center transition duration-500 ease-in ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:-translate-x-5'}`}>
           <div className="flex flex-col text-center md:text-start">
-            <h1 className="text-xl font-semibold text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-2xl">{t('ConnectWithMe')}</h1>
-            <h2 className="text-4xl sm:text-5xl text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-6xl lg:whitespace-nowrap lg:text-7xl">{t('LetsCollaborate')}</h2>
+            <h1 className="text-xl font-semibold text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-2xl dark:from-[#6b3e99] dark:to-amber-400">{t('ConnectWithMe')}</h1>
+            <h2 className="text-4xl sm:text-5xl text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-6xl lg:whitespace-nowrap lg:text-7xl dark:from-[#6b3e99] dark:to-amber-400">{t('LetsCollaborate')}</h2>
           </div>
         </div>
         <div className={`right flex text-md justify-center text-start md:w-1/2 md:text-start transition duration-500 ease-in ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:translate-x-5'}`}>
-          <form onSubmit={handleSubmit(onSubmit)} className="border border-[#4a2771] p-14 rounded-3xl shadow-[#4a2771] shadow-xl lg:p-20 " >
+          <form onSubmit={handleSubmit(onSubmit)} className="border border-[#4a2771] p-14 rounded-3xl shadow-[#4a2771] shadow-xl lg:p-20 dark:shadow-[#8a5dbd] dark:border-[#8a5dbd]" >
             <div className="relative z-0 w-full md:w-[200px] mb-10 group">
               <input
                 type="text"
                 id="name"
-                className={`block py-2.5 px-0 w-full md:w-[200px]  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000]' : 'border-black'
+                className={`block py-2.5 px-0 w-full md:w-[200px]  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000]' : 'border-black dark:border-slate-100'
                   }`}
                 placeholder=" "
                 {...register("name")}
@@ -77,7 +77,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="email"
-                className={`block py-2.5 px-0 w-full  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000]' : 'border-black'
+                className={`block py-2.5 px-0 w-full  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000]' : 'border-black dark:border-slate-100'
                   }`}
                 placeholder=" "
                 {...register("email")}
@@ -95,7 +95,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="message"
-                className={`block py-2.5 px-0 w-full  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000]' : 'border-black'
+                className={`block py-2.5 px-0 w-full  bg-transparent border-b appearance-none   focus:outline-none focus:ring-0  peer ${errors.name ? 'border-[#D40000]' : 'border-black dark:border-slate-100'
                   }`}
                 placeholder=" "
                 {...register("message")}

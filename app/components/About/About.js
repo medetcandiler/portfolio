@@ -44,7 +44,7 @@ const About = () => {
             <p>
               <span>{t('OrSendMeAnEmailAt')}</span>{' '}
               :{' '}
-              <Link className="text-transparent bg-gradient-to-r from-[#4a2771] to-amber-600 bg-clip-text duration-300 ease-in hover:translate-y-[-3px] hover:opacity-80" href="mailto:medetdiler1996@gmail.com">
+              <Link className="text-transparent bg-gradient-to-r from-[#4a2771] to-amber-600 bg-clip-text duration-300 ease-in hover:translate-y-[-3px] hover:opacity-80 dark:from-[#6b3e99] dark:to-amber-400" href="mailto:medetdiler1996@gmail.com">
                 medetdiler1996@gmail.com
               </Link>
             </p>{' '}
