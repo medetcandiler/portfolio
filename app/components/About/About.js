@@ -23,7 +23,7 @@ const About = () => {
           <div className="logos flex items-center justify-center space-x-7 md:justify-start">
             <Link href='https://github.com/medetcandiler' target="_blank">
               <Image
-                className="duration-300 ease-in hover:scale-110"
+                className="duration-300 ease-in hover:scale-110 text-red-300"
                 src='/images/github.svg'
                 width={55}
                 height={55}

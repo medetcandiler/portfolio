@@ -8,6 +8,8 @@ import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import DarkModeToggler from '../components/DarkModeToggler/DarkModeToggler';
 
+import Background from '../components/Background/Background';
+
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
@@ -31,12 +33,10 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   }
   return (
     <html className='scroll-smooth' lang={locale}>
-      <body className={`${roboto.className} dark:text-white`}>
-        <div className="main transition duration-300 dark:bg-black">
-          <div className="gradient"></div>
-        </div>
+      <body className={`${roboto.className} transition duration-300 dark:bg-[#000] dark:text-white `}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ReduxProvider>
+            <Background />
             <div className="app font-serif">
               <Navbar />
               <DarkModeToggler />
