@@ -2,11 +2,13 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { useSelector } from "react-redux";
 
 import LanguagePicker from "../LanguagePicker/LanguagePicker";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 
 const Navbar = () => {
+  const isDark = useSelector(state => state.nav.isDark);
   const locale = useLocale();
   const [selectedLang, setSelectedLang] = useState(locale);
   const t = useTranslations('Navbar');
@@ -29,9 +31,9 @@ const Navbar = () => {
       <div className="left">
         <Image
           className="cursor-pointer"
-          src='/images/logo.png'
-          width={82}
-          height={82}
+          src={isDark ? '/images/logowhite.svg':'/images/logo.png'}
+          width={isDark ? 100 : 82}
+          height={isDark ? 100 : 82}
           alt="logo"
         />
       </div>
