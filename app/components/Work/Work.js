@@ -19,7 +19,7 @@ const Work = ({ text, project }) => {
       setImageSrc('givingly.jpeg');
       setTools([
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='nextjs'
           src={'/images/nextjs.svg'}
           width={80}
@@ -27,7 +27,7 @@ const Work = ({ text, project }) => {
           alt="nextjs logo"
         />,
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='react'
           src={'/images/react.svg'}
           width={80}
@@ -35,7 +35,7 @@ const Work = ({ text, project }) => {
           alt="react logo"
         />,
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='tailwind'
           src={'/images/tailwind.svg'}
           width={80}
@@ -43,7 +43,7 @@ const Work = ({ text, project }) => {
           alt="tailwind logo"
         />,
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='redux'
           src={'/images/redux.svg'}
           width={80}
@@ -51,7 +51,7 @@ const Work = ({ text, project }) => {
           alt="redux logo"
         />,
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='firebase'
           src={'/images/firebase.png'}
           width={80}
@@ -64,7 +64,7 @@ const Work = ({ text, project }) => {
       setImageSrc('movie.svg');
       setTools([
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='js'
           src={'/images/js.svg'}
           width={80}
@@ -72,7 +72,7 @@ const Work = ({ text, project }) => {
           alt="js logo"
         />,
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='tailwind'
           src={'/images/tailwind.svg'}
           width={80}
@@ -80,7 +80,7 @@ const Work = ({ text, project }) => {
           alt="tailwind logo"
         />,
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='api'
           src={'/images/api.svg'}
           width={80}
@@ -88,7 +88,7 @@ const Work = ({ text, project }) => {
           alt="api logo"
         />,
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='css'
           src={'/images/css.svg'}
           width={80}
@@ -101,7 +101,7 @@ const Work = ({ text, project }) => {
       setImageSrc('meme.png');
       setTools([
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='nextjs'
           src={'/images/nextjs.svg'}
           width={80}
@@ -109,7 +109,7 @@ const Work = ({ text, project }) => {
           alt="nextjs logo"
         />,
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='react'
           src={'/images/react.svg'}
           width={80}
@@ -117,7 +117,7 @@ const Work = ({ text, project }) => {
           alt="react logo"
         />,
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='tailwind'
           src={'/images/tailwind.svg'}
           width={80}
@@ -125,7 +125,7 @@ const Work = ({ text, project }) => {
           alt="tailwind logo"
         />,
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='redux'
           src={'/images/redux.svg'}
           width={80}
@@ -133,7 +133,7 @@ const Work = ({ text, project }) => {
           alt="redux logo"
         />,
         <Image
-          className="w-[60px] h-[60px] md:h-[80px] md:w-[80px]"
+          className="resizeImg"
           key='reacthookform'
           src={'/images/reacthookform.svg'}
           width={80}

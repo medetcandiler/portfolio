@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   showMobileNav: false,
   turnToNav: false,
-  isDark: false,
+  isDark: true,
 };
 
 const navSlice = createSlice({
@@ -17,7 +17,7 @@ const navSlice = createSlice({
       state.turnToNav = action.payload;
     },
     setIsDark: (state) => {
-      state.isDark = !state.isDark
+      state.isDark = !state.isDark;
     }
   }
 })
