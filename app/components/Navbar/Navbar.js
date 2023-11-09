@@ -27,10 +27,10 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative container mx-auto px-8 flex justify-between items-center h-[80px] z-50 md:px-0">
+    <header className="relative container mx-auto px-6 flex justify-between items-center h-[80px] z-50 md:px-0">
       <div className="left">
         <Image
-          className="cursor-pointer"
+          className="cursor-pointer -ml-3 md:-ml-0"
           src={isDark ? '/images/logowhite.svg':'/images/logo.png'}
           width={isDark ? 100 : 82}
           height={isDark ? 100 : 82}

@@ -17,11 +17,6 @@ const DarkModeToggler = () => {
     } else {
       root.classList.remove('dark');
     }
-
-    // const savedTheme = localStorage.getItem('theme')
-    // if (savedTheme) {
-    //   dispatch(setIsDark(savedTheme === 'dark'))
-    // }
   }, [theme, isDark])
 
   const toggle = () => {
