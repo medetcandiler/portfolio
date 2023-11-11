@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="left">
         <Image
           className="cursor-pointer -ml-3 md:-ml-0"
-          src={isDark ? '/images/logowhite.svg':'/images/logo.png'}
+          src={isDark ? '/images/logowhite.svg' : '/images/logo.png'}
           width={isDark ? 100 : 82}
           height={isDark ? 100 : 82}
           alt="logo"

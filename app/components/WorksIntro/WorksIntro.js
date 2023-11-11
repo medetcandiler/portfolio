@@ -1,10 +1,12 @@
 'use client'
-import Image from "next/image"
-import useIsVisible from "@/app/utils/useIsVisible"
-import { useRef } from "react"
-import { useTranslations } from "next-intl"
+import Image from "next/image";
+import useIsVisible from "@/app/utils/useIsVisible";
+import { useRef } from "react";
+import { useTranslations } from "next-intl";
+import { useSelector } from "react-redux";
 
 const WorksIntro = () => {
+  const isDark = useSelector(state => state.nav.isDark);
   const workRef = useRef();
   const isVisible = useIsVisible(workRef)
   const t = useTranslations('WorksIntro');
@@ -21,9 +23,11 @@ const WorksIntro = () => {
         <div className="py-6">
           <p className="pb-6">{t('HereAreSomeOfTheTechnologiesImPassionateAbout')}</p>
           <div className="flex items-center justify-center flex-wrap gap-10 md:justify-start">
+            <Image className="resizeImg" src="/images/html.svg" alt="js" width={80} height={80} />
+            <Image className="resizeImg" src="/images/css.svg" alt="js" width={80} height={80} />
             <Image className="resizeImg" src="/images/js.svg" alt="js" width={80} height={80} />
             <Image className="resizeImg" src='images/typescript.svg' alt="ts" width={80} height={80} />
-            <Image className="resizeImg" src="/images/nextjs.svg" alt="nextjs" width={80} height={80} />
+            <Image className="resizeImg" src={isDark ? "/images/nextjsdark.svg" : "/images/nextjs.svg"} alt="nextjs" width={80} height={80} />
             <Image className="resizeImg" src="/images/react.svg" alt="react" width={80} height={80} />
             <Image className="resizeImg" src="/images/tailwind.svg" alt="bootstrap" width={80} height={80} />
             <Image className="resizeImg" src="/images/firebase.svg" alt="css3" width={80} height={80} />

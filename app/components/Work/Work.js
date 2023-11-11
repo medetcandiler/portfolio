@@ -1,44 +1,16 @@
 'use client'
 import Image from "next/image"
-import useIsVisible from "@/app/utils/useIsVisible";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useSelector } from "react-redux";
 
-const workConfig = {
-  givingly: {
-    image: 'givingly.jpeg',
-    tools: ['nextjs', 'react', 'tailwind', 'redux', 'firebase'],
-    href: 'https://crowdfunding-app-team-9-akej.vercel.app/',
-  },
-  cineverse: {
-    image: 'movie.svg',
-    tools: ['js', 'tailwind', 'api', 'css'],
-    href: 'https://github.com/202303-PRM-TR-FEW/movie-project-aybike-berkay-medetcan',
-  },
-  memegenerator: {
-    image: 'meme.png',
-    tools: ['nextjs', 'react', 'tailwind', 'redux', 'reacthookform'],
-    href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
-  },
-  shopfinity: {
-    image: 'meme.png',
-    tools: ['nextjs', 'react', 'tailwind', 'redux', 'reacthookform'],
-    href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
-  },
-  weatherapp: {
-    image: 'meme.png',
-    tools: ['nextjs', 'react', 'tailwind', 'redux', 'reacthookform'],
-    href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
-  },
-  thebeatles: {
-    image: 'meme.png',
-    tools: ['nextjs', 'react', 'tailwind', 'redux', 'reacthookform'],
-    href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
-  }
-}
+import useIsVisible from "@/app/utils/useIsVisible";
+
+
 
 const Work = ({ text, project }) => {
+  const isDark = useSelector(state => state.nav.isDark);
   const [imageSrc, setImageSrc] = useState('');
   const [tools, setTools] = useState([]);
   const [href, setHref] = useState('');
@@ -46,12 +18,47 @@ const Work = ({ text, project }) => {
   const isVisible = useIsVisible(firstRef);
   const t = useTranslations('Work');
 
+  const workConfig = {
+    givingly: {
+      image: 'givingly.jpeg',
+      tools: [isDark ? 'nextjsdark' : 'nextjs', 'react', 'tailwind', 'redux', 'firebase'],
+      href: 'https://crowdfunding-app-team-9-akej.vercel.app/',
+    },
+    cineverse: {
+      image: 'movie.svg',
+      tools: ['js', 'tailwind', 'api', 'css'],
+      href: 'https://github.com/202303-PRM-TR-FEW/movie-project-aybike-berkay-medetcan',
+    },
+    memegenerator: {
+      image: 'meme.png',
+      tools: [isDark ? 'nextjsdark' : 'nextjs', 'react', 'tailwind', 'redux', 'reacthookform'],
+      href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
+    },
+    shopfinity: {
+      image: 'shopfinity.jpg',
+      tools: [isDark ? 'nextjsdark' : 'nextjs', 'react', 'tailwind', 'redux', 'reactquery'],
+      href: 'https://shopfinity.vercel.app/',
+    },
+    weatherapp: {
+      image: 'weather.svg',
+      tools: ['react', 'css', 'restapi', 'redux', 'axios'],
+      href: 'https://weather-app-with-react-js-omega.vercel.app/',
+    },
+    thebeatles: {
+      image: 'beatles.svg',
+      tools: ['html', 'css', 'js', 'tailwind'],
+      href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
+    }
+  }
+
   useEffect(() => {
     const projectConfig = workConfig[project];
     setImageSrc(projectConfig.image);
     setHref(projectConfig.href);
     setTools(projectConfig.tools);
   }, [project]);
+
+
 
   return (
     <div ref={firstRef} className={`container mx-auto leading-relaxed text-md md:text-lg`}>
@@ -64,7 +71,7 @@ const Work = ({ text, project }) => {
                 width={60}
                 height={60}
                 alt="first work"
-                className="rounded-lg bg-black"
+                className="rounded-lg "
               />
               <h1 className="text-2xl font-bold capitalize md:text-4xl ">{project}</h1>
             </div>
@@ -80,8 +87,9 @@ const Work = ({ text, project }) => {
             </p>
           </div>
           <div className="flex flex-wrap gap-5 justify-center space-x-6 md:justify-start">
-            {tools.map(tool => (
-              <Image 
+            {tools.map((tool, index) => (
+              <Image
+                key={index}
                 src={`/images/${tool}.svg`}
                 height={80}
                 width={80}
