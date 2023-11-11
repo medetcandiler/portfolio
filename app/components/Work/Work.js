@@ -47,7 +47,7 @@ const Work = ({ text, project }) => {
     theBeatles: {
       image: 'beatles.jpeg',
       tools: ['html', 'css', 'js', 'tailwind'],
-      href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
+      href: 'https://your-favorite-band.vercel.app/',
     }
   }
 
