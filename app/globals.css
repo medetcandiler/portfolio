@@ -19,6 +19,10 @@
   .resizeImg {
     @apply w-[60px] h-[60px] md:h-[80px] md:w-[80px];
   }
+
+  .gradientText {
+    @apply text-transparent bg-gradient-to-r from-[#4a2771] to-amber-600 bg-clip-text dark:from-[#6b3e99] dark:to-amber-400 text-transparent bg-gradient-to-r from-[#4a2771] to-amber-600 bg-clip-text dark:from-[#6b3e99] dark:to-amber-400
+  }
 }
 
 .main {

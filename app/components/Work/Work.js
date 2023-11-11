@@ -5,12 +5,13 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-const Work = ({ text, project }) => {
+const Work = ({ text, project, usedTools }) => {
   const [imageSrc, setImageSrc] = useState('');
   const [tools, setTools] = useState(null);
   const [href, setHref] = useState('');
   const firstRef = useRef();
   const isVisible = useIsVisible(firstRef);
+
 
   const t = useTranslations('Work');
 

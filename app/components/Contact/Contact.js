@@ -49,8 +49,8 @@ const Contact = () => {
       <div className={`relative py-28 flex flex-col space-y-12 justify-center md:h-screen md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-0`}>
         <div className={`flex justify-center items-center transition duration-500 ease-in ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:-translate-x-5'}`}>
           <div className="flex flex-col text-center md:text-start">
-            <h1 className="text-xl font-semibold text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-2xl dark:from-[#6b3e99] dark:to-amber-400">{t('ConnectWithMe')}</h1>
-            <h2 className="text-4xl sm:text-5xl text-transparent bg-gradient-to-r from-[#4a2771]  to-amber-600 bg-clip-text md:text-6xl lg:whitespace-nowrap lg:text-7xl dark:from-[#6b3e99] dark:to-amber-400">{t('LetsCollaborate')}</h2>
+            <h1 className="text-xl font-semibold gradientText  md:text-2xl">{t('ConnectWithMe')}</h1>
+            <h2 className="text-4xl sm:text-5xl gradientText  md:text-6xl lg:whitespace-nowrap lg:text-7xl">{t('LetsCollaborate')}</h2>
           </div>
         </div>
         <div className={`right flex text-md justify-center text-start md:w-1/2 md:text-start transition duration-500 ease-in ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:translate-x-5'}`}>
@@ -67,7 +67,7 @@ const Contact = () => {
               />
               <label
                 htmlFor="name"
-                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 md:text-lg ${errors.name && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
+                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6  ${errors.name && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
                   }`}
               >
                 {t('YourName')}
@@ -85,7 +85,7 @@ const Contact = () => {
               />
               <label
                 htmlFor="email"
-                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 md:text-lg ${errors.name && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
+                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6  ${errors.name && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
                   }`}
               >
                 {t('YourEmail')}
@@ -103,7 +103,7 @@ const Contact = () => {
               />
               <label
                 htmlFor="message"
-                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 md:text-lg ${errors.name && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
+                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6  ${errors.name && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
                   }`}
               >
                 {t('YourMessage')}

@@ -1,13 +1,19 @@
 'use client'
 import Image from "next/image"
 import useIsVisible from "@/app/utils/useIsVisible"
-import { useRef } from "react"
+import { useRef, useEffect, use } from "react"
 import { useTranslations } from "next-intl"
 
-const WorksIntro = () => {
+const WorksIntro = ({ isMoreClicked }) => {
   const workRef = useRef();
   const isVisible = useIsVisible(workRef)
   const t = useTranslations('WorksIntro');
+  console.log(isMoreClicked)
+
+  useEffect(() => {
+    isMoreClicked || workRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [isMoreClicked])
+
   return (
     <section id="work" ref={workRef}>
       <div className={`container mx-auto mt-[1px] flex flex-col justify-center leading-relaxed text-center pb-28 px-6 transition ease-in-out duration-500 ${isVisible ? "opacity-100 md:translaye-y-0" : "opacity-0 md:-translate-y-5"}  md:text-start md:text-lg`}>
