@@ -56,7 +56,7 @@ const Work = ({ text, project }) => {
     setImageSrc(projectConfig.image);
     setHref(projectConfig.href);
     setTools(projectConfig.tools);
-  }, [project]);
+  }, [project, isDark]);
 
 
 
