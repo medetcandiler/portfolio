@@ -9,8 +9,7 @@ import Work from "../components/Work/Work";
 import TopButton from "../components/GoToTopButton/TopButton";
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
-
-
+import ShowMoreButton from "../components/ShowMoreButton/ShowMoreButton";
 
 export default function Home() {
   const [isMoreClicked, setIsMoreClicked] = useState(false);
@@ -18,12 +17,12 @@ export default function Home() {
   const t = useTranslations('Home');
 
   const projects = [
-    { id: 1, name: 'givingly', text: t('givingly'), tools: [] },
-    { id: 2, name: 'cineverse', text: t('cineverse'), tools: [] },
-    { id: 3, name: 'memegenerator', text: t('memeGenerator'), tools: [] },
-    { id: 4, name: 'shopfinity', text: t('shopfinity'), tools: [] },
-    { id: 5, name: 'weatherapp', text: t('weatherapp'), tools: [] },
-    { id: 6, name: 'the beatles fan page', text: t('thebeatlesfanpage'), tools: [] },
+    { id: 1, name: 'givingly', text: t('givingly') },
+    { id: 2, name: 'cineverse', text: t('cineverse') },
+    { id: 3, name: 'memegenerator', text: t('memeGenerator') },
+    { id: 4, name: 'shopfinity', text: t('shopfinity') },
+    { id: 5, name: 'weatherapp', text: t('weatherapp') },
+    { id: 6, name: 'thebeatles', text: t('thebeatlesfanpage') },
   ];
 
   const renderProjects = () => {
@@ -32,18 +31,12 @@ export default function Home() {
     ))
   }
 
-  const handleMoreButton = () => {
-    setIsMoreClicked(prev => !prev)
-  }
-
   return (
     <main className="md:px-12 ">
       <HeroSection />
       <WorksIntro isMoreClicked={isMoreClicked} />
       {renderProjects()}
-      <button onClick={handleMoreButton} className="w-full mb-20 link">
-        {isMoreClicked ? 'Show Less' : 'Show More...'}
-      </button>
+      <ShowMoreButton isMoreClicked={isMoreClicked} setIsMoreClicked={setIsMoreClicked} />
       <About />
       <Contact />
       {turnToNav && <TopButton />}

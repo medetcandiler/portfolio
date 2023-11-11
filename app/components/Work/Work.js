@@ -5,145 +5,52 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-const Work = ({ text, project, usedTools }) => {
+const workConfig = {
+  givingly: {
+    image: 'givingly.jpeg',
+    tools: ['nextjs', 'react', 'tailwind', 'redux', 'firebase'],
+    href: 'https://crowdfunding-app-team-9-akej.vercel.app/',
+  },
+  cineverse: {
+    image: 'movie.svg',
+    tools: ['js', 'tailwind', 'api', 'css'],
+    href: 'https://github.com/202303-PRM-TR-FEW/movie-project-aybike-berkay-medetcan',
+  },
+  memegenerator: {
+    image: 'meme.png',
+    tools: ['nextjs', 'react', 'tailwind', 'redux', 'reacthookform'],
+    href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
+  },
+  shopfinity: {
+    image: 'meme.png',
+    tools: ['nextjs', 'react', 'tailwind', 'redux', 'reacthookform'],
+    href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
+  },
+  weatherapp: {
+    image: 'meme.png',
+    tools: ['nextjs', 'react', 'tailwind', 'redux', 'reacthookform'],
+    href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
+  },
+  thebeatles: {
+    image: 'meme.png',
+    tools: ['nextjs', 'react', 'tailwind', 'redux', 'reacthookform'],
+    href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
+  }
+}
+
+const Work = ({ text, project }) => {
   const [imageSrc, setImageSrc] = useState('');
-  const [tools, setTools] = useState(null);
+  const [tools, setTools] = useState([]);
   const [href, setHref] = useState('');
   const firstRef = useRef();
   const isVisible = useIsVisible(firstRef);
-
-
   const t = useTranslations('Work');
 
   useEffect(() => {
-    if (project === 'givingly') {
-      setImageSrc('givingly.jpeg');
-      setTools([
-        <Image
-          className="resizeImg"
-          key='nextjs'
-          src={'/images/nextjs.svg'}
-          width={80}
-          height={80}
-          alt="nextjs logo"
-        />,
-        <Image
-          className="resizeImg"
-          key='react'
-          src={'/images/react.svg'}
-          width={80}
-          height={80}
-          alt="react logo"
-        />,
-        <Image
-          className="resizeImg"
-          key='tailwind'
-          src={'/images/tailwind.svg'}
-          width={80}
-          height={80}
-          alt="tailwind logo"
-        />,
-        <Image
-          className="resizeImg"
-          key='redux'
-          src={'/images/redux.svg'}
-          width={80}
-          height={80}
-          alt="redux logo"
-        />,
-        <Image
-          className="resizeImg"
-          key='firebase'
-          src={'/images/firebase.png'}
-          width={80}
-          height={80}
-          alt="firebase logo"
-        />,
-      ]);
-      setHref('https://crowdfunding-app-team-9-akej.vercel.app/');
-    } else if (project === 'cineverse') {
-      setImageSrc('movie.svg');
-      setTools([
-        <Image
-          className="resizeImg"
-          key='js'
-          src={'/images/js.svg'}
-          width={80}
-          height={80}
-          alt="js logo"
-        />,
-        <Image
-          className="resizeImg"
-          key='tailwind'
-          src={'/images/tailwind.svg'}
-          width={80}
-          height={80}
-          alt="tailwind logo"
-        />,
-        <Image
-          className="resizeImg"
-          key='api'
-          src={'/images/api.svg'}
-          width={80}
-          height={80}
-          alt="api logo"
-        />,
-        <Image
-          className="resizeImg"
-          key='css'
-          src={'/images/css.svg'}
-          width={80}
-          height={80}
-          alt="css logo"
-        />,
-      ]);
-      setHref('https://github.com/202303-PRM-TR-FEW/movie-project-aybike-berkay-medetcan');
-    } else {
-      setImageSrc('meme.png');
-      setTools([
-        <Image
-          className="resizeImg"
-          key='nextjs'
-          src={'/images/nextjs.svg'}
-          width={80}
-          height={80}
-          alt="nextjs logo"
-        />,
-        <Image
-          className="resizeImg"
-          key='react'
-          src={'/images/react.svg'}
-          width={80}
-          height={80}
-          alt="react logo"
-        />,
-        <Image
-          className="resizeImg"
-          key='tailwind'
-          src={'/images/tailwind.svg'}
-          width={80}
-          height={80}
-          alt="tailwind logo"
-        />,
-        <Image
-          className="resizeImg"
-          key='redux'
-          src={'/images/redux.svg'}
-          width={80}
-          height={80}
-          alt="redux logo"
-        />,
-        <Image
-          className="resizeImg"
-          key='reacthookform'
-          src={'/images/reacthookform.svg'}
-          width={80}
-          height={80}
-          alt="reacthookform logo"
-        />,
-      ]);
-      setHref('https://meme-generator-git-main-medetcandiler.vercel.app/');
-    }
+    const projectConfig = workConfig[project];
+    setImageSrc(projectConfig.image);
+    setHref(projectConfig.href);
+    setTools(projectConfig.tools);
   }, [project]);
 
   return (
@@ -173,7 +80,14 @@ const Work = ({ text, project, usedTools }) => {
             </p>
           </div>
           <div className="flex flex-wrap gap-5 justify-center space-x-6 md:justify-start">
-            {tools}
+            {tools.map(tool => (
+              <Image 
+                src={`/images/${tool}.svg`}
+                height={80}
+                width={80}
+                alt={tool}
+              />
+            ))}
           </div>
         </div>
       </div>

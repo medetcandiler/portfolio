@@ -46,7 +46,7 @@ const Contact = () => {
   const t = useTranslations('Contact');
   return (
     <div id="let" ref={contactRef} >
-      <div className={`relative py-28 flex flex-col space-y-12 justify-center md:h-screen md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-0`}>
+      <div className={`relative py-28 flex flex-col space-y-12 justify-center md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-36`}>
         <div className={`flex justify-center items-center transition duration-500 ease-in ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:-translate-x-5'}`}>
           <div className="flex flex-col text-center md:text-start">
             <h1 className="text-xl font-semibold gradientText  md:text-2xl">{t('ConnectWithMe')}</h1>
