@@ -22,7 +22,7 @@ export default function Home() {
     { id: 3, name: 'memegenerator', text: t('memeGenerator') },
     { id: 4, name: 'shopfinity', text: t('shopfinity') },
     { id: 5, name: 'weatherapp', text: t('weatherapp') },
-    { id: 6, name: 'thebeatles', text: t('thebeatlesfanpage') },
+    { id: 6, name: 'theBeatles', text: t('thebeatlesfanpage') },
   ];
 
   const renderProjects = () => {

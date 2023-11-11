@@ -44,8 +44,8 @@ const Work = ({ text, project }) => {
       tools: ['react', 'css', 'restapi', 'redux', 'axios'],
       href: 'https://weather-app-with-react-js-omega.vercel.app/',
     },
-    thebeatles: {
-      image: 'beatles.svg',
+    theBeatles: {
+      image: 'beatles.jpeg',
       tools: ['html', 'css', 'js', 'tailwind'],
       href: 'https://meme-generator-git-main-medetcandiler.vercel.app/',
     }

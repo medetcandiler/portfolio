@@ -5,7 +5,7 @@ const Toast = ({ message, isShowToast, setIsShowToast }) => {
   return (
       <div
         id="toast-success"
-        className={`absolute flex items-center p-2.5 mb-4 bg-transparent rounded-lg shadow shadow-[#4a2771] transition-opacity ease-in duration-500 ${isShowToast ? "opacity-100" : "opacity-0"} md:bottom-5 md:left-5 md:translate-x-0`}
+        className={`absolute bottom-2 left-5 flex items-center p-2.5 mb-4 bg-transparent rounded-lg shadow-md border border-[#8a5dbd] shadow-[#8a5dbd] transition-opacity ease-in duration-500 ${isShowToast ? "opacity-100" : "opacity-0"} md:bottom-0 md:left-1/2 md:-translate-x-1/2`}
         role="alert"
       >
         <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-amber-600 bg-[#4a2771] rounded-lg">
@@ -26,7 +26,7 @@ const Toast = ({ message, isShowToast, setIsShowToast }) => {
         <button
           type="button"
           onClick={handleClose}
-          className="ml-auto -mx-1.5 -my-1.5 text-[#4a2771] p-1.5 inline-flex items-center justify-center h-8 w-8 duration-300 ease-in hover:-translate-y-[3px] hover:opacity-70"
+          className="ml-auto -mx-1.5 -my-1.5 text-amber-600 p-1.5 inline-flex items-center justify-center h-8 w-8 duration-300 ease-in hover:-translate-y-[3px] hover:opacity-70"
           data-dismiss-target="#toast-success"
           aria-label="Close"
         >
