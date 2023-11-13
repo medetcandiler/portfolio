@@ -10,17 +10,28 @@ const DarkModeToggler = () => {
   const theme = isDark ? 'dark' : 'light';
 
   useEffect(() => {
-    localStorage.setItem('theme', theme);
+    dispatch(setIsDark(JSON.parse(localStorage.getItem('isDark'))));
+  }, [])
+
+  useEffect(() => {
     const root = window.document.documentElement;
     if (theme === 'dark') {
       root.classList.add('dark');
     } else {
       root.classList.remove('dark');
     }
+    localStorage.setItem('isDark', JSON.stringify(isDark));
+
+
+    
   }, [theme, isDark])
 
   const toggle = () => {
-    dispatch(setIsDark())
+    if (isDark === true) {
+      dispatch(setIsDark(false))
+    } else {
+      dispatch(setIsDark(true))
+    }
   }
 
   return (

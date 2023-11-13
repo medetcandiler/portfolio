@@ -56,8 +56,6 @@ opacity: 0.15;
 
 const Background = () => {
   const isDark = useSelector(state => state.nav.isDark);
-
-
   return (
     <Main $isdark={isDark}>
       <Gradient></Gradient>

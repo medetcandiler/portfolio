@@ -16,12 +16,11 @@ const navSlice = createSlice({
     setTurnToNav: (state, action) => {
       state.turnToNav = action.payload;
     },
-    setIsDark: (state) => {
-      state.isDark = !state.isDark;
+    setIsDark: (state, action) => {
+      state.isDark = action.payload;
     }
   }
-})
+});
 
 export const { setShowMobileNav, setTurnToNav, setIsDark } = navSlice.actions;
 export default navSlice.reducer;
-
