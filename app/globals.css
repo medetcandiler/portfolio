@@ -8,6 +8,10 @@
     @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
   }
 
+  .section-title {
+    @apply text-4xl md:text-5xl
+  }
+
   .link {
     @apply ease-in duration-200 hover:-translate-y-[3px] hover:opacity-70
   }

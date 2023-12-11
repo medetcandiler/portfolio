@@ -13,7 +13,7 @@ const WorksIntro = () => {
   return (
     <section id="work" ref={workRef}>
       <div className={`container mx-auto mt-[1px] pt-12 flex flex-col justify-center leading-relaxed text-center pb-28 px-6 transition ease-in-out duration-500 ${isVisible ? "opacity-100 md:translaye-y-0" : "opacity-0 md:-translate-y-5"}  md:text-start md:text-lg`}>
-        <h3 className="text-4xl font-bold pb-4 md:text-6xl md:pb-6 ">{t('SomeOfMyWork')}</h3>
+        <h3 className="section-title font-bold pb-4 md:pb-6 ">{t('SomeOfMyWork')}</h3>
         <div className="flex flex-col space-y-4 text-md md:space-y-6">
           <p>{t('ImThrilledAboutTheCreativeProcessOfBringingIdeasToLifeThroughWebDevelopmentWithABackgroundInMechanicalEngineeringIBringAUniquePerspectiveToFrontendWorkEmphasizingOrganizationSystematicThinkingAndEffectiveProblemSolving')}</p>
           <p>
