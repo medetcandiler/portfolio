@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useSelector } from "react-redux";
 
@@ -12,6 +12,7 @@ const Navbar = () => {
   const locale = useLocale();
   const [selectedLang, setSelectedLang] = useState(locale);
   const t = useTranslations('Navbar');
+
   const scrollToSection = (section) => {
     if (typeof document !== "undefined") {
       const workSection = document.getElementById(`${section}`);
@@ -42,9 +43,7 @@ const Navbar = () => {
         <button onClick={() => scrollToSection('about')} className="link">{t('about')}</button>
         <button onClick={() => scrollToSection('let')} className="link">{t('lets')}</button>
       </div>
-      <section className="md:hidden">
-        <HamburgerMenu />
-      </section>
+      <HamburgerMenu />
 
       <LanguagePicker handleLocaleChange={handleLocaleChange} selectedLang={selectedLang} />
     </header>
