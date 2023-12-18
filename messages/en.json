@@ -22,20 +22,20 @@
   },
   "WorksIntro": {
     "SomeOfMyWork": "Some of my work.",
-    "ImThrilledAboutTheCreativeProcessOfBringingIdeasToLifeThroughWebDevelopmentWithABackgroundInMechanicalEngineeringIBringAUniquePerspectiveToFrontendWorkEmphasizingOrganizationSystematicThinkingAndEffectiveProblemSolving": "I'm thrilled about the creative process of bringing ideas to life through web development. With a background in mechanical engineering, I bring a unique perspective to frontend work, emphasizing organization, systematic thinking, and effective problem-solving.",
-    "SpecializingInReactAndNextjsICraftCaptivatingUserInterfacesUtilizingAWideArrayOfModernWebTechnologiesInMyWorkAsAWebDeveloperMyStrongestQualityIsMyOpenMindednessAndCuriosityWhichIBringToEveryProjectTheseQualitiesDriveMeToAnalyzeAndSolveComplexProblemsWithTechnology": "Specializing in React and Next.js, I craft captivating user interfaces, utilizing a wide array of modern web technologies. In my work as a web developer, my strongest quality is my open-mindedness and curiosity, which I bring to every project. These qualities drive me to analyze and solve complex problems with technology.",
-    "HereAreSomeOfTheTechnologiesImPassionateAbout": "Here are some of the technologies I'm passionate about:",
-    "BelowYoullFindDescriptionsAndLinksToSomeOfTheProjectsIveHadThePleasureOfWorkingOnEachSectionWillSpecifyWhetherItsAPersonalProjectOrOneIveDevelopedAsPartOfTheTechnologyCompanyICoFoundedSomethingNew": "Below, you'll find descriptions and links to some of the projects I've had the pleasure of working on. Each section will specify whether it's a personal project or one I've developed as part of the technology company I co-founded, SomethingNew."
+    "firstText": "Passionate about bringing ideas to life through web development, I offer a unique perspective shaped by my background in mechanical engineering. With a focus on frontend work, I emphasize organization, systematic thinking, and effective problem-solving.",
+    "secondText": "Specializing in React and Next.js, I create captivating user interfaces, leveraging a diverse range of modern web technologies. As a web developer, my strongest assets are open-mindedness and curiosity, driving me to analyze and solve complex problems with technology.",
+    "thirdText": "Technologies I'm passionate about include React, Next.js, JavaScript, TypeScript, and more...",
+    "fourthText": "Below, you'll find descriptions and links to some of the projects I've had the pleasure of working on."
   },
   "Work": {
     "VisitAt": "Visit at"
   },
   "About": {
     "HeyThere": "Hey there!",
-    "ImAFrontendDeveloperWithAPassionForCreatingCaptivatingWebExperiences": "I'm a Frontend Developer with a passion for creating captivating web experiences.",
-    "AfterWorkingAsAnEngineerInTheFieldForSeveralMonthsIRealizedThatMyTrueCallingLayInWebDevelopmentIveAlwaysBeenDrawnToCodingSoftwareAndComputersAndIDecidedToMakeACareerChangeToPursueMyPassion": "After working as an engineer in the field for several months, I realized that my true calling lay in web development. I've always been drawn to coding, software, and computers, and I decided to make a career change to pursue my passion.",
-    "ISuccessfullyCompletedA6MonthImmersiveWebDevelopmentBootcampAtReCodedThisComprehensiveProgramEquippedMeWith500HoursOfHandsonLearningAndProjectBasedExperienceReinforcingMyPassionForWebDevelopment": "I successfully completed a 6-month immersive web development bootcamp at Re:Coded. This comprehensive program equipped me with 500+ hours of hands-on learning and project-based experience, reinforcing my passion for web development.",
-    "WithABackgroundInMechanicalEngineeringIBringAUniquePerspectiveToMyFrontendWorkMyEngineeringEducationHasTaughtMeTheValueOfOrganizationSystematicThinkingAndEffectiveProblemSolving": "With a background in Mechanical Engineering, I bring a unique perspective to my frontend work. My engineering education has taught me the value of organization, systematic thinking, and effective problem-solving.",
+    "firstText": "I'm a passionate Frontend Developer dedicated to crafting captivating web experiences.",
+    "secondText": "Formerly an engineer in the field, my journey took a turn when I discovered my true passion for web development. With a background in Mechanical Engineering, I bring a unique perspective to my work, blending creativity with a foundation in organization, systematic thinking, and effective problem-solving.",
+    "thirdText": "I honed my skills through a rigorous 6-month immersive web development bootcamp at Re:Coded, accumulating 500+ hours of hands-on learning and project-based experience. This transformative experience solidified my commitment to the world of web development.",
+    "fourthText": "Let's build something extraordinary together. Explore my portfolio and let's connect!",
     "YouCanFindMeOn": "You can find me on:",
     "OrSendMeAnEmailAt": "or send me an email at",
     "DownloadCV": "Download CV"

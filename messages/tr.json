@@ -22,20 +22,20 @@
   },
   "WorksIntro": {
     "SomeOfMyWork": "Çalışmalarımdan Bazıları.",
-    "ImThrilledAboutTheCreativeProcessOfBringingIdeasToLifeThroughWebDevelopmentWithABackgroundInMechanicalEngineeringIBringAUniquePerspectiveToFrontendWorkEmphasizingOrganizationSystematicThinkingAndEffectiveProblemSolving": "Fikirleri web geliştirme yoluyla hayata geçirme yaratıcı sürecine bayılıyorum. Mekanik mühendislik geçmişimle, ön yüz işine benzersiz bir bakış açısı getiriyor ve organizasyon, sistemli düşünme ve etkili problem çözme konularına vurgu yapıyorum.",
-    "SpecializingInReactAndNextjsICraftCaptivatingUserInterfacesUtilizingAWideArrayOfModernWebTechnologiesInMyWorkAsAWebDeveloperMyStrongestQualityIsMyOpenMindednessAndCuriosityWhichIBringToEveryProjectTheseQualitiesDriveMeToAnalyzeAndSolveComplexProblemsWithTechnology": "React ve Next.js konusunda uzmanlaşmış olarak, büyük bir modern web teknolojileri yelpazesini kullanarak etkileyici kullanıcı arayüzleri oluşturuyorum. Web geliştirici olarak en güçlü özelliğim açık fikirlilik ve merakımdır, bu özellikleri her projeye getiriyorum. Bu özellikler, teknoloji ile karmaşık sorunları analiz etme ve çözme konusundaki beni yönlendirir.",
-    "HereAreSomeOfTheTechnologiesImPassionateAbout": "İlgili olduğum bazı teknolojiler:",
-    "BelowYoullFindDescriptionsAndLinksToSomeOfTheProjectsIveHadThePleasureOfWorkingOnEachSectionWillSpecifyWhetherItsAPersonalProjectOrOneIveDevelopedAsPartOfTheTechnologyCompanyICoFoundedSomethingNew": "Aşağıda, üzerinde çalışmaktan mutluluk duyduğum bazı projelerin açıklamalarını ve bağlantılarını bulacaksınız. Her bölüm, kişisel bir proje olup olmadığını veya SomethingNew adlı teknoloji şirketinin kurucu ortağı olarak geliştirdiğim projeleri belirtecektir."
+    "firstText": "Web geliştirme aracılığıyla fikirleri hayata geçirmek beni heyecanlandırıyor. Mekanik mühendislik geçmişimle frontend çalışmalarına benzersiz bir bakış açısı getiriyorum. Organizasyon, sistemli düşünce ve etkili problem çözme konularına odaklanıyorum.",
+    "secondText": "React ve Next.js konusunda uzmanlaşmış olarak, çeşitli modern web teknolojilerini kullanarak etkileyici kullanıcı arayüzleri oluşturuyorum. Web geliştirici olarak, en güçlü yanlarım açıklık ve merak; bu özellikler, her projeye teknoloji ile karmaşık sorunları analiz etme ve çözme motivasyonu sağlıyor.",
+    "thirdText": "İlgili olduğum bazı teknolojiler:",
+    "fourthText": "Aşağıda, üzerinde çalışmaktan mutluluk duyduğum bazı projelerin açıklamalarını ve bağlantılarını bulacaksınız."
   },
   "Work": {
     "VisitAt": "Ziyaret et"
   },
   "About": {
     "HeyThere": "Merhaba!",
-    "ImAFrontendDeveloperWithAPassionForCreatingCaptivatingWebExperiences": "Ben, etkileyici web deneyimleri oluşturma tutkusu olan bir Ön Yüz Geliştiriciyim.",
-    "AfterWorkingAsAnEngineerInTheFieldForSeveralMonthsIRealizedThatMyTrueCallingLayInWebDevelopmentIveAlwaysBeenDrawnToCodingSoftwareAndComputersAndIDecidedToMakeACareerChangeToPursueMyPassion": "Birkaç ay boyunca alanda mühendis olarak çalıştıktan sonra, gerçek çağrımın web geliştirmede olduğunu fark ettim. Her zaman kodlamaya, yazılıma ve bilgisayarlara çekildim ve tutkumu takip etmek için kariyer değişikliği yapmaya karar verdim.",
-    "ISuccessfullyCompletedA6MonthImmersiveWebDevelopmentBootcampAtReCodedThisComprehensiveProgramEquippedMeWith500HoursOfHandsonLearningAndProjectBasedExperienceReinforcingMyPassionForWebDevelopment": "Re:Coded'da 6 ay süren yoğun bir web geliştirme bootcamp'ini başarıyla tamamladım. Bu kapsamlı program, bana 500+ saatlik uygulamalı öğrenme ve projeye dayalı deneyim sağladı ve web geliştirme tutkumu pekiştirdi.",
-    "WithABackgroundInMechanicalEngineeringIBringAUniquePerspectiveToMyFrontendWorkMyEngineeringEducationHasTaughtMeTheValueOfOrganizationSystematicThinkingAndEffectiveProblemSolving": "Mekanik Mühendislik geçmişine sahip olarak, ön yüz işime benzersiz bir bakış açısı getiriyorum. Mühendislik eğitimim bana organizasyonun, sistemli düşünmenin ve etkili problem çözmenin değerini öğretti.",
+    "firstText": "Etkileyici web deneyimleri oluşturma tutkusuna sahip bir Ön Yüz Geliştiriciyim.",
+    "secondText": "Alanında bir mühendis olarak çalıştıktan sonra, gerçek tutkumu web geliştirmede keşfettiğimde yolculuğum bir döneme girdi. Mekanik Mühendislik geçmişimle, işime benzersiz bir bakış açısı getiriyor, yaratıcılığı organizasyon, sistemli düşünme ve etkili problem çözme temeliyle birleştiriyorum.",
+    "thirdText": "Re:Coded'da yoğun 6 aylık bir web geliştirme bootcamp'ini başarıyla tamamlayarak becerilerimi geliştirdim. 500 saatten fazla uygulamalı öğrenme ve projeye dayalı deneyim kazandım. Bu dönüştürücü deneyim, web geliştirmeye olan bağlılığımı pekiştirdi.",
+    "fourthText": "Birlikte olağanüstü bir şeyler inşa edelim. Portföyümü keşfedin ve bağlantı kurmamıza izin verin!",
     "YouCanFindMeOn": "Beni şurada bulabilirsiniz:",
     "OrSendMeAnEmailAt": "veya bana bir e-posta gönderin",
     "DownloadCV": "Özgeçmişi İndir"

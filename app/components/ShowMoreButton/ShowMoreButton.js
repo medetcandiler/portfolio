@@ -12,7 +12,7 @@ const ShowMoreButton = ({ isMoreClicked, setIsMoreClicked }) => {
   }
   return (
     <div ref={buttonRef} className={`-mt-5  text-center `} >
-      <button onClick={handleMoreButton} className={`text-4xl animate-bounce transition-opacity duration-500 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'} hover:opacity-70`}>
+      <button onClick={handleMoreButton} className={`text-4xl animate-bounce observerTransition ${isVisible ? 'opacity-100' : 'opacity-0'} hover:opacity-70`}>
         {isMoreClicked ? <MdExpandLess /> : <TfiMoreAlt />}
       </button>
     </div>
