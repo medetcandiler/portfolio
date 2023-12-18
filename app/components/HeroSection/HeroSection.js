@@ -48,6 +48,7 @@ const HeroSection = () => {
               href={locale === 'tr' ? '/medetcandilercvtr.pdf' : '/medetcandilercv.pdf'}
               locale={false}
               target='_blank'
+              priority={false}
             >
               <button className='cvBtn'>{t('Download CV')}</button>
             </Link>
@@ -60,7 +61,7 @@ const HeroSection = () => {
             width={400}
             height={400}
             alt='profile picture'
-            priority
+            prefetch={false}
           />
         </div>
       </div>

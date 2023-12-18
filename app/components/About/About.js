@@ -68,6 +68,7 @@ const About = () => {
                 href={locale === 'tr' ? '/medetcandilercvtr.pdf' : '/medetcandilercv.pdf'}
                 locale={false}
                 target="_blank"
+                prefetch={false}
               >
                 <button className="cvBtn">{t('DownloadCV')}</button>
               </Link>
