@@ -44,14 +44,13 @@ const HeroSection = () => {
             {t('heroSectionText')}
           </p>
           <div className='pt-1'>
-            <Link
+            <a
               href={locale === 'tr' ? '/medetcandilercvtr.pdf' : '/medetcandilercv.pdf'}
-              locale={false}
+              download
               target='_blank'
-              priority={false}
             >
               <button className='cvBtn'>{t('Download CV')}</button>
-            </Link>
+            </a>
           </div>
         </div>
         <div className={`right md:w-2/5 md:h-auto md:-mt-36 flex justify-center transition duration-500 ease-in-out ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:translate-x-5'}`}>

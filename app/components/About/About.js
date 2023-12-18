@@ -64,14 +64,13 @@ const About = () => {
               />
             </div>
             <div className="">
-              <Link
+              <a
                 href={locale === 'tr' ? '/medetcandilercvtr.pdf' : '/medetcandilercv.pdf'}
-                locale={false}
+                download
                 target="_blank"
-                prefetch={false}
               >
                 <button className="cvBtn">{t('DownloadCV')}</button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
