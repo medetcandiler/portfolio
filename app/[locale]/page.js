@@ -26,8 +26,8 @@ export default function Home() {
   ];
 
   const renderProjects = () => {
-    return projects.slice(0, isMoreClicked ? projects.length : 3).map(project => (
-      <Work key={project.id} project={project.name} text={project.text} />
+    return projects.slice(0, isMoreClicked ? projects.length : 3).map(({id, name, text}) => (
+      <Work key={id} project={name} text={text} />
     ))
   }
 

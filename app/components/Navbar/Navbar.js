@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useSelector } from "react-redux";
 
@@ -36,6 +36,7 @@ const Navbar = () => {
           width={isDark ? 100 : 82}
           height={isDark ? 100 : 82}
           alt="logo"
+          priority
         />
       </div>
       <div className="hidden right  space-x-8 text-[16px] font-semibold md:flex">
@@ -44,7 +45,6 @@ const Navbar = () => {
         <button onClick={() => scrollToSection('let')} className="link">{t('lets')}</button>
       </div>
       <HamburgerMenu />
-
       <LanguagePicker handleLocaleChange={handleLocaleChange} selectedLang={selectedLang} />
     </header>
   )

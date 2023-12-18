@@ -30,6 +30,7 @@ const LanguagePicker = ({ handleLocaleChange, selectedLang }) => {
           alt={selectedLang === "en" ? "English" : "Turkish"}
           width={20}
           height={15}
+          className="w-auto h-auto"
         />
       </button>
       {showChoices && (

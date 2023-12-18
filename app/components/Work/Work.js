@@ -4,10 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useSelector } from "react-redux";
-
 import useIsVisible from "@/app/utils/useIsVisible";
-
-
 
 const Work = ({ text, project }) => {
   const isDark = useSelector(state => state.nav.isDark);
@@ -58,21 +55,21 @@ const Work = ({ text, project }) => {
     setTools(projectConfig.tools);
   }, [project, isDark]);
 
-
-
   return (
     <div ref={firstRef} className={`container mx-auto leading-relaxed text-md md:text-lg`}>
       <div className="border-t border-[#020202] py-24 px-6 dark:border-slate-100">
         <div className={`flex flex-col space-y-7 transition  duration-500 ease-in ${isVisible ? "opacity-100 md:translate-y-0" : "opacity-0 md:-translate-y-5"}`}>
           <div className="flex flex-col space-y-3 items-center md:items-start">
             <div className="flex items-center space-x-4">
-              <Image
-                src={`/images/${imageSrc}`}
-                width={60}
-                height={60}
-                alt="first work"
-                className="rounded-lg "
-              />
+              {imageSrc && (
+                <Image
+                  src={`/images/${imageSrc}`}
+                  width={60}
+                  height={60}
+                  alt={imageSrc}
+                  className="rounded-lg"
+                />
+              )}
               <h1 className="text-2xl font-bold capitalize md:text-4xl ">{project}</h1>
             </div>
             <div className="flex items-center space-x-1 text-lg">
