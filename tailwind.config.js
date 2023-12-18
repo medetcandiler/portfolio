@@ -13,6 +13,7 @@ module.exports = {
       },
       colors: {
         transparentPurple: 'rgba(74, 39, 113, 0.1)',
+        transparentMobileNav: 'rgba(74, 39, 113, 0.7)',
         hoverPurple: 'rgba(74, 39, 113, 0.2)'
       },
       height: {

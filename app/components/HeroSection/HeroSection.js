@@ -29,7 +29,7 @@ const HeroSection = () => {
           <h1 className='text-4xl font-bold whitespace-nowrap lg:text-5xl xl:text-7xl'>Medetcan Diler</h1>
           <div className=' flex items-center justify-center space-x-2 font-medium md:justify-start text-2xl lg:text-4xl -mx-6 md:-mx-0 '>
             <p className='whitespace-nowrap'>{t('I am a')}</p>
-            <span className='text-[#bea6d5] dark:text-[#9274c4]'>
+            <span className='text-[#6b3e99] dark:text-[#9274c4]'>
               <Typewriter
                 options={{
                   strings: [t('Frontend Developer'), t('Web Developer'), t('Mechanical Engineer')],

@@ -29,12 +29,14 @@ const HamburgerMenu = () => {
         <div className={`${styles.bar2} ${isDark && 'bg-[#f2f2f2]'}`}></div>
         <div className={`${styles.bar3} ${isDark && 'bg-[#f2f2f2]'}`}></div>
       </div>
-      <div className={`absolute ease-in duration-300 left-0 w-full transition-all ${showMobileNav ? 'opacity-100 translaye-y-0' : 'opacity-0 -translate-y-1'}`}>
-        {showMobileNav && <div className="flex flex-col items-center text-[14px] font-semibold space-y-1.5 ">
-          <button onClick={e => scrollToSection('work')}>{t('work')}</button>
-          <button onClick={e => scrollToSection('about')}>{t('about')}</button>
-          <button onClick={e => scrollToSection('let')}>{t('lets')}</button>
-        </div>}
+      <div className={`absolute left-1/2 -translate-x-1/2  observerTransition ${showMobileNav ? 'opacity-100 translaye-y-0' : 'opacity-0 -translate-y-1'}`}>
+        {showMobileNav && (
+          <div className="flex flex-col items-center text-[14px] text-white font-semibold space-y-1.5 bg-[#6b3e99] px-3 py-2 rounded-tl-[20px] rounded-br-[20px]">
+            <button onClick={e => scrollToSection('work')}>{t('work')}</button>
+            <button onClick={e => scrollToSection('about')}>{t('about')}</button>
+            <button onClick={e => scrollToSection('let')}>{t('lets')}</button>
+          </div>
+        )}
       </div>
     </section>
   )
