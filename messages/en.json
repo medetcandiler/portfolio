@@ -8,9 +8,9 @@
     "thebeatlesfanpage": "Step into the enchanting realm of The Beatles through this dedicated web page. Crafted with HTML, Tailwind CSS, and Vanilla JavaScript, every line of code echoes the timeless melodies of my favorite band.Immerse yourself in dynamic visuals and smooth interactions that capture the essence of The Fab Four's musical journey."
   },
   "Navbar":{
-    "work": "Work",
+    "work": "My Work",
     "about":"About",
-    "lets":"Let's talk"
+    "lets":"Let's Talk"
   },
   "HeroSection": {
     "I am a": "I am a",

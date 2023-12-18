@@ -31,10 +31,10 @@ const HamburgerMenu = () => {
       </div>
       <div className={`absolute left-1/2 -translate-x-1/2  observerTransition ${showMobileNav ? 'opacity-100 translaye-y-0' : 'opacity-0 -translate-y-1'}`}>
         {showMobileNav && (
-          <div className="flex flex-col items-center text-[14px] text-white font-semibold space-y-1.5 bg-[#6b3e99] px-3 py-2 rounded-tl-[20px] rounded-br-[20px]">
+          <div className="flex flex-col items-center text-[14px] text-white font-semibold space-y-1.5 bg-[#6b3e99] px-8 py-1.5 rounded-tl-[30px] rounded-br-[30px] rounded-bl-sm rounded-tr-sm">
             <button onClick={e => scrollToSection('work')}>{t('work')}</button>
             <button onClick={e => scrollToSection('about')}>{t('about')}</button>
-            <button onClick={e => scrollToSection('let')}>{t('lets')}</button>
+            <button className="whitespace-nowrap" onClick={e => scrollToSection('let')}>{t('lets')}</button>
           </div>
         )}
       </div>
