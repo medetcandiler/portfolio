@@ -6,21 +6,13 @@ import { useSelector } from "react-redux";
 
 import LanguagePicker from "../LanguagePicker/LanguagePicker";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+import { scrollToSection } from "@/app/utils/scrollToSection";
 
 const Navbar = () => {
   const isDark = useSelector(state => state.nav.isDark);
   const locale = useLocale();
   const [selectedLang, setSelectedLang] = useState(locale);
   const t = useTranslations('Navbar');
-
-  const scrollToSection = (section) => {
-    if (typeof document !== "undefined") {
-      const workSection = document.getElementById(`${section}`);
-      if (workSection) {
-        workSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
 
   const handleLocaleChange = (lang) => {
     setSelectedLang(lang);

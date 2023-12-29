@@ -35,7 +35,7 @@ const DarkModeToggler = () => {
   return (
     <button
       onClick={toggle}
-      className={`fixed z-10 left-3 bottom-6 transition duration-300 ease-in hover:-translate-y-[3px] text-white  ${isDark ? ' bg-[#8a5dbd] hover:bg-[#9274c4]' : 'bg-[#6b3e99] hover:bg-[#8a5dbd]'
+      className={`fixed z-50 left-3 bottom-6 transition duration-300 ease-in hover:-translate-y-[3px] text-white  ${isDark ? ' bg-[#8a5dbd] hover:bg-[#9274c4]' : 'bg-[#6b3e99] hover:bg-[#8a5dbd]'
         } p-2 rounded-full md:left-10 md:bottom-10 opacity-60`}
     >
       {isDark ? <MdNightlight size={35} /> : <MdLightMode size={35} />}

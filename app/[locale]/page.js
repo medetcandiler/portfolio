@@ -32,7 +32,7 @@ export default function Home() {
   }
 
   return (
-    <main className="md:px-12 ">
+    <main className="md:px-12 -z-20">
       <HeroSection />
       <WorksIntro isMoreClicked={isMoreClicked} />
       {renderProjects()}

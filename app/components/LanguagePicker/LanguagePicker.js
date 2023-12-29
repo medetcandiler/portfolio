@@ -28,8 +28,8 @@ const LanguagePicker = ({ handleLocaleChange, selectedLang }) => {
         <Image
           src={selectedLang === "en" ? "/images/uk.svg" : "/images/tr.svg"}
           alt={selectedLang === "en" ? "English" : "Turkish"}
-          width={20}
-          height={15}
+          width={22.5}
+          height={17.5}
         />
       </button>
       {showChoices && (
@@ -39,7 +39,7 @@ const LanguagePicker = ({ handleLocaleChange, selectedLang }) => {
               className=" cursor-pointer"
               onClick={() => handleLocaleButtonClick("en")}
             >
-              <Image src="/images/uk.svg" alt="English" width={20} height={15} />
+              <Image src="/images/uk.svg" alt="English" width={22.5} height={17.5} />
             </button>
           )}
           {selectedLang === 'en' && (
@@ -47,7 +47,7 @@ const LanguagePicker = ({ handleLocaleChange, selectedLang }) => {
               className=" cursor-pointer"
               onClick={() => handleLocaleButtonClick("tr")}
             >
-              <Image src="/images/tr.svg" alt="Turkish" width={20} height={15} />
+              <Image src="/images/tr.svg" alt="Turkish" width={22.5} height={17.5} />
             </button>
           )}
         </div>

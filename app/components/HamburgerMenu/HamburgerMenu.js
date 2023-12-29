@@ -2,6 +2,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setShowMobileNav } from "@/app/redux/features/navSlice";
 import { useTranslations } from "next-intl";
+import Background from "../Background/Background";
 
 import styles from './HamburgerMenu.module.css'
 
@@ -10,32 +11,49 @@ const HamburgerMenu = () => {
   const isDark = useSelector(state => state.nav.isDark);
   const dispatch = useDispatch();
   const t = useTranslations('Navbar');
+
+  const toggleBodyOverflow = () => {
+    if (!showMobileNav) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+  }
+
   const handleHamClick = () => {
+    toggleBodyOverflow()
     dispatch(setShowMobileNav());
   };
   const scrollToSection = (section) => {
+    toggleBodyOverflow()
     if (typeof document !== "undefined") {
       const workSection = document.getElementById(`${section}`);
       if (workSection) {
-        workSection.scrollIntoView({ behavior: "smooth" });
+        workSection.scrollIntoView({
+          behavior: 'smooth',
+          block: "start"
+        });
       }
     }
     dispatch(setShowMobileNav())
   };
   return (
     <section className="hamburger md:hidden">
-      <div className={`${styles.container} ${showMobileNav && styles.change}`} onClick={handleHamClick}>
+      <div className={`${showMobileNav ? styles.change : ''} mr-2 cursor-pointer`} onClick={handleHamClick}>
         <div className={`${styles.bar1} ${isDark && 'bg-[#f2f2f2]'}`}></div>
         <div className={`${styles.bar2} ${isDark && 'bg-[#f2f2f2]'}`}></div>
         <div className={`${styles.bar3} ${isDark && 'bg-[#f2f2f2]'}`}></div>
       </div>
-      <div className={`absolute left-1/2 -translate-x-1/2  observerTransition ${showMobileNav ? 'opacity-100 translaye-y-0' : 'opacity-0 -translate-y-1'}`}>
+      <div className={`fixed left-0 top-0 w-full observerTransition -z-10 ${showMobileNav ? 'opacity-100 translaye-y-0' : 'opacity-0 -translate-y-1'}`}>
         {showMobileNav && (
-          <div className="flex flex-col items-center text-[14px] text-white font-semibold space-y-1.5 bg-[#6b3e99] px-8 py-1.5 rounded-tl-[30px] rounded-br-[30px] rounded-bl-sm rounded-tr-sm">
-            <button onClick={e => scrollToSection('work')}>{t('work')}</button>
-            <button onClick={e => scrollToSection('about')}>{t('about')}</button>
-            <button className="whitespace-nowrap" onClick={e => scrollToSection('let')}>{t('lets')}</button>
-          </div>
+          <>
+            <Background />
+            <div className={`flex flex-col h-screen pb-[80px] w-full justify-center items-center text-[16px] font-bold space-y-20 bg-darkPurple px-8 py-1.5 ${isDark ? 'text-white' : 'text-black'}`}>
+              <button className="text-4xl" onClick={e => scrollToSection('work')}>{t('work')}</button>
+              <button className="text-4xl" onClick={e => scrollToSection('about')}>{t('about')}</button>
+              <button className="whitespace-nowrap text-4xl" onClick={e => scrollToSection('let')}>{t('lets')}</button>
+            </div>
+          </>
         )}
       </div>
     </section>

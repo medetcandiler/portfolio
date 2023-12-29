@@ -1,5 +1,5 @@
 import '../globals.css'
-import { Roboto } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
 import { ReduxProvider } from '../redux/provider'
 import { NextIntlClientProvider } from 'next-intl'
@@ -10,7 +10,7 @@ import DarkModeToggler from '../components/DarkModeToggler/DarkModeToggler';
 
 import Background from '../components/Background/Background';
 
-const roboto = Roboto({
+const montserrat = Montserrat({
   weight: '400',
   subsets: ['latin'],
 })
@@ -32,12 +32,12 @@ export default async function LocaleLayout({ children, params: { locale } }) {
     notFound();
   }
   return (
-    <html className='scroll-smooth' lang={locale}>
-      <body className={`${roboto.className} transition duration-300 dark:bg-[#000] dark:text-[#f2f2f2] `}>
+    <html lang={locale}>
+      <body className={`${montserrat.className} transition duration-300 dark:bg-[#000] dark:text-[#f2f2f2]`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ReduxProvider>
             <Background />
-            <div className="app font-serif">
+            <div className="app">
               <Navbar />
               <DarkModeToggler />
               {children}
