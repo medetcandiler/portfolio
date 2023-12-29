@@ -31,7 +31,7 @@ const Navbar = () => {
           priority
         />
       </div>
-      <div className="hidden right  space-x-8 text-[16px] font-semibold md:flex">
+      <div className="hidden right space-x-8 text-[16px] pr-2 font-semibold md:flex">
         <button onClick={() => scrollToSection('work')} className="link">{t('work')}</button>
         <button onClick={() => scrollToSection('about')} className="link">{t('about')}</button>
         <button onClick={() => scrollToSection('let')} className="link">{t('lets')}</button>

@@ -66,7 +66,7 @@ const Contact = () => {
               />
               <label
                 htmlFor="name"
-                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6  ${errors.name && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
+                className={`peer-focus:font-medium pl-2 absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6  ${errors.name && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
                   }`}
               >
                 {t('YourName')}
@@ -84,7 +84,7 @@ const Contact = () => {
               />
               <label
                 htmlFor="email"
-                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6  ${errors.email && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
+                className={`peer-focus:font-medium pl-2 absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6  ${errors.email && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
                   }`}
               >
                 {t('YourEmail')}
@@ -102,7 +102,7 @@ const Contact = () => {
               />
               <label
                 htmlFor="message"
-                className={`peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6  ${errors.message && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
+                className={`peer-focus:font-medium pl-2 absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6  ${errors.message && "peer-focus:text-[#D40000] text-[#D40000] dark:peer-focus:text-[#FF8080] dark:text-[#FF8080]"
                   }`}
               >
                 {t('YourMessage')}
