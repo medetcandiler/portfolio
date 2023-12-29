@@ -9,13 +9,13 @@ import { useSelector } from "react-redux"
 const About = () => {
   const isDark = useSelector(state => state.nav.isDark);
   const aboutRef = useRef();
-  const isVisible = useIsVisible(aboutRef);
+  const { isIntersecting, transitionClasses } = useIsVisible(aboutRef);
   const t = useTranslations('About');
   const locale = useLocale();
   return (
     <section>
-      <div ref={aboutRef} className={`flex flex-col items-center pt-20 space-y-6 px-6 md:flex-row md:space-y-0 md:space-x-10 `}>
-        <div id="about" className={`left text-md flex flex-col text-center space-y-5 leading-relaxed md:text-lg md:w-2/3 md:text-start observerTransition ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:-translate-x-5'} `}>
+      <div ref={aboutRef} className={`about flex flex-col items-center pt-20 space-y-6 px-6 md:flex-row md:space-y-0 md:space-x-10 `}>
+        <div id="about" className={`left text-md flex flex-col text-center space-y-5 leading-relaxed md:text-lg md:w-2/3 md:text-start observerTransition ${transitionClasses} `}>
           <h1 className="section-title font-semibold " >{t('HeyThere')} <span className="section-title" role="img" aria-label="hello">👋</span></h1>
           <p>{t('firstText')}</p>
           <p>{t('secondText')}</p>
@@ -52,7 +52,7 @@ const About = () => {
             </p>{' '}
           </div>
         </div>
-        <div className={`right flex justify-center md:w-1/3 transition duration-500 ease-in ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:translate-x-5'}`}>
+        <div className={`right flex justify-center md:w-1/3 transition duration-500 ease-in ${isIntersecting ? 'md:opacity-1 md:translate-x-0' : 'md:opacity-0 md:translate-x-5'}`}>
           <div className="flex flex-col items-center space-y-6">
             <div className="w-[200px] h-[200px] lg:w-[250px] lg:h-[250px]">
               <Image

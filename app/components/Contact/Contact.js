@@ -41,18 +41,18 @@ const Contact = () => {
 
   }
   const contactRef = useRef();
-  const isVisible = useIsVisible(contactRef);
+  const {isIntersecting, transitionClasses} = useIsVisible(contactRef);
   const t = useTranslations('Contact');
   return (
     <div>
       <div id="let" className={`relative py-28 flex flex-col space-y-12 justify-center md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-36`}>
-        <div className={`flex justify-center items-center observerTransition ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:-translate-x-5'}`}>
+        <div className={`flex justify-center items-center observerTransition ${transitionClasses}`}>
           <div className="flex flex-col text-center md:text-start">
             <h1 className="text-xl font-semibold gradientText  md:text-2xl">{t('ConnectWithMe')}</h1>
             <h2 className="text-4xl sm:text-5xl gradientText  md:text-6xl lg:whitespace-nowrap lg:text-7xl">{t('LetsCollaborate')}</h2>
           </div>
         </div>
-        <div className={`right flex text-md justify-center text-start md:w-1/2 md:text-start observerTransition ${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:translate-x-5'}`}>
+        <div className={`right flex text-md justify-center text-start md:w-1/2 md:text-start observerTransition ${isIntersecting ? 'md:opacity-1 md:translate-x-0' : 'md:opacity-0 md:translate-x-5'}`}>
           <form onSubmit={handleSubmit(onSubmit)} className="border border-[#4a2771] p-14  rounded-3xl shadow-[#4a2771] shadow-xl lg:p-20 lg:py-24 dark:shadow-[#8a5dbd] dark:border-[#8a5dbd]" >
             <div ref={contactRef} className="relative z-0 w-full md:w-[200px] mb-10 group">
               <input

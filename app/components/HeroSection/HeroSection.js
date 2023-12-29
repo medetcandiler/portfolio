@@ -10,22 +10,22 @@ import { setTurnToNav } from '@/app/redux/features/navSlice';
 
 const HeroSection = () => {
   const heroRef = useRef();
-  const isVisible = useIsVisible(heroRef);
+  const { transitionClasses, isIntersecting } = useIsVisible(heroRef);
   const dispatch = useDispatch();
   const t = useTranslations('HeroSection');
   const locale = useLocale();
   useEffect(() => {
-    if (isVisible) {
+    if (isIntersecting) {
       dispatch(setTurnToNav(false));
     } else {
       dispatch(setTurnToNav(true));
     }
-  }, [isVisible]);
+  }, [isIntersecting]);
 
   return (
-    <section ref={heroRef} >
+    <section ref={heroRef} className='herosection' >
       <div className={`container mx-auto flex flex-col-reverse gap-4 h-screen-80 px-6 w-full  justify-center md:flex-row md:items-center md:space-x-4 md:pb-[80px]`}>
-        <div className={`left w-full text-center flex flex-col space-y-3 md:space-y-6 md:w-3/5 md:text-start observerTransition ${isVisible ? 'opacity-1  md:translate-x-0' : 'opacity-0 md:-translate-x-5'}`}>
+        <div className={`left w-full text-center flex flex-col space-y-3 md:space-y-6 md:w-3/5 md:text-start observerTransition ${transitionClasses}`}>
           <h1 className='text-4xl font-bold whitespace-nowrap lg:text-5xl xl:text-7xl '>Medetcan Diler</h1>
           <div className=' flex items-center justify-center space-x-2 font-medium md:justify-start text-2xl lg:text-4xl -mx-6 md:-mx-0 '>
             <p className='whitespace-nowrap'>{t('I am a')}</p>
@@ -52,7 +52,7 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-        <div className={`right flex justify-center md:w-2/5 md:h-auto md:-mt-36${isVisible ? 'opacity-1 md:translate-x-0' : 'opacity-0 md:translate-x-5'}`}>
+        <div className={`right flex justify-center md:w-2/5 md:h-auto md:-mt-36 observerTransition ${isIntersecting ? 'md:opacity-1  md:translate-x-0' : 'md:opacity-0 md:translate-x-5'}`}>
           <Image
             className='rounded-full h-[150px] w-[150px] md:w-auto md:h-auto'
             src='/images/pp.png'

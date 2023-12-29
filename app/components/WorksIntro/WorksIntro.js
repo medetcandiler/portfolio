@@ -8,11 +8,11 @@ import { useSelector } from "react-redux";
 const WorksIntro = () => {
   const isDark = useSelector(state => state.nav.isDark);
   const workRef = useRef();
-  const isVisible = useIsVisible(workRef)
+  const {transitionClasses} = useIsVisible(workRef)
   const t = useTranslations('WorksIntro');
   return (
     <section id="work" ref={workRef}>
-      <div className={`container mx-auto mt-[1px] pt-12 flex flex-col justify-center leading-relaxed text-center pb-28 px-6 observerTransition ${isVisible ? "opacity-100 md:translaye-y-0" : "opacity-0 md:-translate-y-5"}  md:text-start md:text-lg`}>
+      <div className={`container mx-auto mt-[1px] pt-12 flex flex-col justify-center leading-relaxed text-center pb-28 px-6 observerTransition ${transitionClasses}  md:text-start md:text-lg`}>
         <h3 className="section-title font-bold pb-4 md:pb-6 ">{t('SomeOfMyWork')}</h3>
         <div className="flex flex-col space-y-4 text-md md:space-y-6">
           <p>{t('firstText')}</p>

@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  showMobileNav: false,
   turnToNav: false,
   isDark: true,
 };
@@ -10,9 +9,6 @@ const navSlice = createSlice({
   name: 'nav',
   initialState,
   reducers: {
-    setShowMobileNav: (state) => {
-      state.showMobileNav = !state.showMobileNav;
-    },
     setTurnToNav: (state, action) => {
       state.turnToNav = action.payload;
     },
@@ -22,5 +18,5 @@ const navSlice = createSlice({
   }
 });
 
-export const { setShowMobileNav, setTurnToNav, setIsDark } = navSlice.actions;
+export const { setTurnToNav, setIsDark } = navSlice.actions;
 export default navSlice.reducer;

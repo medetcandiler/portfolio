@@ -12,7 +12,7 @@ const Work = ({ text, project }) => {
   const [tools, setTools] = useState([]);
   const [href, setHref] = useState('');
   const firstRef = useRef();
-  const isVisible = useIsVisible(firstRef);
+  const {transitionClasses} = useIsVisible(firstRef);
   const t = useTranslations('Work');
 
   const workConfig = {
@@ -58,7 +58,7 @@ const Work = ({ text, project }) => {
   return (
     <div ref={firstRef} className={`container mx-auto leading-relaxed text-md md:text-lg`}>
       <div className="border-t border-[#020202] py-24 px-6 dark:border-slate-100">
-        <div className={`flex flex-col space-y-7 observerTransition ${isVisible ? "opacity-100 md:translate-y-0" : "opacity-0 md:-translate-y-5"}`}>
+        <div className={`flex flex-col space-y-7 observerTransition ${transitionClasses}`}>
           <div className="flex flex-col space-y-3 items-center md:items-start">
             <div className="flex items-center space-x-4">
               {imageSrc && (
