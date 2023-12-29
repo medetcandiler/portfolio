@@ -19,10 +19,9 @@ const HamburgerMenu = () => {
       document.body.classList.remove('overflow-hidden');
     }
   }
-
   const handleHamClick = () => {
-    toggleBodyOverflow()
     dispatch(setShowMobileNav());
+    toggleBodyOverflow()
   };
   const scrollToSection = (section) => {
     toggleBodyOverflow()
@@ -44,7 +43,7 @@ const HamburgerMenu = () => {
         <div className={`${styles.bar2} ${isDark && 'bg-[#f2f2f2]'}`}></div>
         <div className={`${styles.bar3} ${isDark && 'bg-[#f2f2f2]'}`}></div>
       </div>
-      <div className={`fixed left-0 top-0 w-full observerTransition -z-10 ${showMobileNav ? 'opacity-100 translaye-y-0' : 'opacity-0 -translate-y-1'}`}>
+      <div className={`fixed left-0 top-0 w-full -z-10`}>
         {showMobileNav && (
           <>
             <Background />
