@@ -57,7 +57,7 @@ const Work = ({ text, project }) => {
 
   return (
     <div ref={firstRef} className={`container mx-auto leading-relaxed text-md md:text-lg`}>
-      <div className="border-t border-[#020202] py-24 px-6 dark:border-slate-100">
+      <div className="border-t border-[#020202] py-24 px-3 md:px-6 dark:border-slate-100">
         <div className={`flex flex-col space-y-7 observerTransition ${transitionClasses}`}>
           <div className="flex flex-col space-y-3 items-center md:items-start">
             <div className="flex items-center space-x-4">

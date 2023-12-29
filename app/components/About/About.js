@@ -14,7 +14,7 @@ const About = () => {
   const locale = useLocale();
   return (
     <section>
-      <div ref={aboutRef} className={`about flex flex-col items-center pt-20 space-y-6 px-6 md:flex-row md:space-y-0 md:space-x-10 `}>
+      <div ref={aboutRef} className={`about flex flex-col items-center py-10 space-y-6 px-6 md:flex-row md:space-y-0 md:space-x-10 `}>
         <div id="about" className={`left text-md flex flex-col text-center space-y-5 leading-relaxed md:text-lg md:w-2/3 md:text-start observerTransition ${transitionClasses} `}>
           <h1 className="section-title font-semibold " >{t('HeyThere')} <span className="section-title" role="img" aria-label="hello">👋</span></h1>
           <p>{t('firstText')}</p>

@@ -41,11 +41,11 @@ const Contact = () => {
 
   }
   const contactRef = useRef();
-  const {isIntersecting, transitionClasses} = useIsVisible(contactRef);
+  const { isIntersecting, transitionClasses } = useIsVisible(contactRef);
   const t = useTranslations('Contact');
   return (
     <div>
-      <div id="let" className={`relative py-28 flex flex-col space-y-12 justify-center md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-36`}>
+      <div id="let" className={`relative py-10 px-6 flex flex-col space-y-12 justify-center md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-36`}>
         <div className={`flex justify-center items-center observerTransition ${transitionClasses}`}>
           <div className="flex flex-col text-center md:text-start">
             <h1 className="text-xl font-semibold gradientText  md:text-2xl">{t('ConnectWithMe')}</h1>
