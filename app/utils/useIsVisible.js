@@ -7,7 +7,7 @@ const useIsVisible = (ref) => {
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       setIsIntersecting(entry.isIntersecting)
-    })
+    }, {threshold : 0.1})
     observer.observe(ref.current);
     return () => {
       observer.disconnect()
