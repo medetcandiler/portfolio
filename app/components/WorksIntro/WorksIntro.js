@@ -31,7 +31,7 @@ const WorksIntro = () => {
   
   return (
     <section id="work" ref={workRef}>
-      <div className={`container mx-auto mt-[1px] pt-10 flex flex-col justify-center leading-relaxed text-center pb-28 observerTransition ${transitionClasses}  md:text-start md:text-lg`}>
+      <div className={`container mx-auto pt-10 flex flex-col justify-center leading-relaxed text-center pb-28 observerTransition ${transitionClasses}  md:text-start md:text-lg`}>
         <h3 className="section-title font-bold pb-4 md:pb-6 ">{t('SomeOfMyWork')}</h3>
         <div className="flex flex-col space-y-4 text-md md:space-y-6">
           <p>{t('firstText')}</p>

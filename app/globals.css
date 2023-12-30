@@ -5,7 +5,7 @@
 
 @layer utilities {
   .main-container {
-    @apply relative container mx-auto z-10 flex flex-col justify-center items-center px-4 md:px-6  bg-red-300 
+    @apply relative container mx-auto z-10 flex flex-col justify-center items-center px-4 md:px-6
   }
 
   .section-title {
@@ -29,7 +29,7 @@
   }
 
   .observerTransition {
-    @apply transition duration-300 ease-in
+    @apply transition duration-500 ease-in
   }
 }
 

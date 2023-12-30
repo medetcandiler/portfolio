@@ -15,10 +15,14 @@ const useIsVisible = (ref) => {
   }, [ref])
 
   useEffect(() => {
-    if (ref.current.classList.contains('herosection') || ref.current.classList.contains('about') || ref.current.classList.contains('contact') ) {
-      setTransitionClasses(isIntersecting ? 'md:opacity-1  md:translate-x-0' : 'md:opacity-0 md:-translate-x-5')
+    const transitions = {
+      default: isIntersecting ? "md:opacity-100 md:translate-y-0" : "md:opacity-0 md:-translate-y-5",
+      special: isIntersecting ? 'md:opacity-1  md:translate-x-0' : 'md:opacity-0 md:-translate-x-5'
+    };
+    if (ref.current.classList.contains('special')) {
+      setTransitionClasses(transitions.special);
     } else {
-      setTransitionClasses(isIntersecting ? "md:opacity-100 md:translate-y-0" : "md:opacity-0 md:-translate-y-5")
+      setTransitionClasses(transitions.default);
     }
   }, [isIntersecting])
 
