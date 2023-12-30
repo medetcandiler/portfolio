@@ -68,6 +68,7 @@ const Work = ({ text, project }) => {
                   height={60}
                   alt={imageSrc}
                   className="rounded-lg"
+                  priority
                 />
               )}
               <h1 className="text-2xl font-bold capitalize md:text-4xl ">{project}</h1>

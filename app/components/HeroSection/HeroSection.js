@@ -24,8 +24,8 @@ const HeroSection = () => {
 
   return (
     <section ref={heroRef} className='herosection' >
-      <div className={`container mx-auto flex flex-col-reverse gap-4 h-screen-80 px-6 w-full  justify-center md:flex-row md:items-center md:space-x-4 md:pb-[80px]`}>
-        <div className={`left w-full text-center flex flex-col space-y-3 md:space-y-6 md:w-3/5 md:text-start observerTransition  ${transitionClasses}`}>
+      <div className={`container mx-auto flex flex-col-reverse gap- h-screen-80 pb-[110px] w-full justify-center md:flex-row md:items-center md:space-x-4 md:gap-4 md:pb-[80px] `}>
+        <div className={`left w-full text-center flex flex-col space-y-1.5 md:space-y-6 md:w-3/5 md:text-start observerTransition  ${transitionClasses}`}>
           <h1 className='text-4xl font-bold lg:text-5xl xl:text-7xl whitespace-nowrap'>Medetcan Diler</h1>
           <div className=' flex items-center justify-center space-x-2 font-medium md:justify-start text-2xl lg:text-4xl -mx-6 md:-mx-0 '>
             <p className='whitespace-nowrap'>{t('I am a')}</p>
@@ -35,11 +35,13 @@ const HeroSection = () => {
                   strings: [t('Frontend Developer'), t('Web Developer'), t('Mechanical Engineer')],
                   autoStart: true,
                   loop: true,
+                  deleteSpeed: 35,
+                  delay: 70
                 }}
               />
             </span>
           </div>
-          <p className='text-md leading-relaxed md:px-0  md:text-lg '>
+          <p className='text-md leading-relaxed md:text-lg '>
             {t('heroSectionText')}
           </p>
           <div className='pt-1'>

@@ -32,7 +32,7 @@ export default function Home() {
   }
 
   return (
-    <main className="md:px-10 -z-20">
+    <main className="container mx-auto flex flex-col items-center w-full md:px-10 -z-20">
       <HeroSection />
       <WorksIntro isMoreClicked={isMoreClicked} />
       {renderProjects()}

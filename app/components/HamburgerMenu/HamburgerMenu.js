@@ -46,7 +46,7 @@ const HamburgerMenu = () => {
       {showMobileNav && (
         <div className={`fixed left-0 top-0 w-full -z-10`}>
           <Background />
-          <div className={`flex flex-col h-screen pb-[80px] w-full justify-center items-center text-[16px] font-bold space-y-20 bg-darkPurple px-8 py-1.5 ${isDark ? 'text-white' : 'text-black'}`}>
+          <div className={`flex flex-col h-screen w-full justify-center items-center text-[16px] font-bold space-y-20 bg-darkPurple px-8 py-1.5 ${isDark ? 'text-white' : 'text-black'}`}>
             <button className="text-4xl" onClick={e => scrollToSection('work')}>{t('work')}</button>
             <button className="text-4xl" onClick={e => scrollToSection('about')}>{t('about')}</button>
             <button className="whitespace-nowrap text-4xl" onClick={e => scrollToSection('let')}>{t('lets')}</button>
