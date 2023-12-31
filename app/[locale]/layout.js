@@ -1,14 +1,14 @@
 import '../globals.css'
 import { Montserrat } from 'next/font/google'
 
-import { ReduxProvider } from '../redux/provider'
+import { ReduxProvider } from '../../redux/provider'
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation';
-import Navbar from '../components/Navbar/Navbar'
-import Footer from '../components/Footer/Footer'
-import DarkModeToggler from '../components/DarkModeToggler/DarkModeToggler';
+import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
+import DarkModeToggler from '../../components/DarkModeToggler/DarkModeToggler';
 
-import Background from '../components/Background/Background';
+import Background from '../../components/Background/Background';
 
 const montserrat = Montserrat({
   weight: '400',

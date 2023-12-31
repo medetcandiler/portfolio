@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 import LanguagePicker from "../LanguagePicker/LanguagePicker";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
-import { scrollToSection } from "@/app/utils/scrollToSection";
+import { scrollToSection } from "@/utils/scrollToSection";
 
 const Navbar = () => {
   const isDark = useSelector(state => state.nav.isDark);

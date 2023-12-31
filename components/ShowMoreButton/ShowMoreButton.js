@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import useIsVisible from "@/app/utils/useIsVisible";
+import useIsVisible from "@/utils/useIsVisible";
 import { MdExpandLess } from 'react-icons/md';
 import { TfiMoreAlt } from 'react-icons/tfi';
 

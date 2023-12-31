@@ -1,4 +1,4 @@
-import useIsVisible from "@/app/utils/useIsVisible";
+import useIsVisible from "@/utils/useIsVisible";
 import { useRef, useState } from "react";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -41,11 +41,13 @@ const Contact = () => {
 
   }
   const contactRef = useRef();
-  const { isIntersecting, transitionClasses } = useIsVisible(contactRef);
+  const isIntersecting = useIsVisible(contactRef);
   const t = useTranslations('Contact');
   return (
     <section ref={contactRef} id="let" className={`special relative py-10 flex flex-col space-y-8 justify-center md:flex-row md:space-y-0 md:space-x-12 md:items-center md:py-36`}>
-      <div className={`flex justify-center items-center observerTransition ${transitionClasses}`}>
+      <div className={`flex justify-center items-center observerTransition ${isIntersecting
+          ? `md:opacity-1 md:translate-x-0`
+          : `md:opacity-0 md:-translate-x-5`}`}>
         <div className="flex flex-col text-center md:text-start">
           <h1 className="text-xl font-semibold gradientText  md:text-2xl">{t('ConnectWithMe')}</h1>
           <h2 className="text-4xl sm:text-5xl gradientText md:text-6xl whitespace-nowrap lg:text-7xl">{t('LetsCollaborate')}</h2>

@@ -2,20 +2,22 @@
 import Image from "next/image"
 import { useRef } from "react"
 import Link from "next/link"
-import useIsVisible from "@/app/utils/useIsVisible"
+import useIsVisible from "@/utils/useIsVisible"
 import { useTranslations, useLocale } from "next-intl";
 import { useSelector } from "react-redux"
 
 const About = () => {
   const isDark = useSelector(state => state.nav.isDark);
   const aboutRef = useRef();
-  const { isIntersecting, transitionClasses } = useIsVisible(aboutRef);
+  const isIntersecting = useIsVisible(aboutRef);
   const t = useTranslations('About');
   const locale = useLocale();
   return (
     <section>
       <div ref={aboutRef} className={`special flex flex-col items-center py-10 space-y-6 md:flex-row md:space-y-0 md:space-x-10 `}>
-        <div id="about" className={`left text-md flex flex-col text-center space-y-5 leading-relaxed md:text-lg md:w-2/3 md:text-start observerTransition ${transitionClasses} `}>
+        <div id="about" className={`left text-md flex flex-col text-center space-y-5 leading-relaxed md:text-lg md:w-2/3 md:text-start observerTransition ${isIntersecting
+          ? `md:opacity-1 md:translate-x-0`
+          : `md:opacity-0 md:-translate-x-5`} `}>
           <h1 className="section-title font-semibold " >{t('HeyThere')} <span className="section-title" role="img" aria-label="hello">👋</span></h1>
           <p>{t('firstText')}</p>
           <p>{t('secondText')}</p>

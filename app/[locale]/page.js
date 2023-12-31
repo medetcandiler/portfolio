@@ -3,13 +3,13 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useTranslations } from "next-intl";
 
-import HeroSection from "../components/HeroSection/HeroSection";
-import WorksIntro from "../components/WorksIntro/WorksIntro";
-import Work from "../components/Work/Work";
-import TopButton from "../components/GoToTopButton/TopButton";
-import About from "../components/About/About";
-import Contact from "../components/Contact/Contact";
-import ShowMoreButton from "../components/ShowMoreButton/ShowMoreButton";
+import HeroSection from "../../components/HeroSection/HeroSection";
+import WorksIntro from "../../components/WorksIntro/WorksIntro";
+import Work from "../../components/Work/Work";
+import TopButton from "../../components/GoToTopButton/TopButton";
+import About from "../../components/About/About";
+import Contact from "../../components/Contact/Contact";
+import ShowMoreButton from "../../components/ShowMoreButton/ShowMoreButton";
 
 export default function Home() {
   const [isMoreClicked, setIsMoreClicked] = useState(false);

@@ -5,12 +5,12 @@ import { useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useTranslations, useLocale } from 'next-intl';
 
-import useIsVisible from '@/app/utils/useIsVisible';
-import { setTurnToNav } from '@/app/redux/features/navSlice';
+import useIsVisible from '@/utils/useIsVisible';
+import { setTurnToNav } from '@/redux/features/navSlice';
 
 const HeroSection = () => {
   const heroRef = useRef();
-  const { transitionClasses, isIntersecting } = useIsVisible(heroRef);
+  const isIntersecting = useIsVisible(heroRef);
   const dispatch = useDispatch();
   const t = useTranslations('HeroSection');
   const locale = useLocale();
@@ -24,8 +24,10 @@ const HeroSection = () => {
 
   return (
     <section ref={heroRef} className='special' >
-      <div className={`container mx-auto flex flex-col-reverse h-screen-80 pb-[110px] w-full justify-center md:flex-row md:items-center md:space-x-4 md:gap-4 md:pb-[80px] overflow-hidden`}>
-        <div className={`left w-full text-center flex flex-col space-y-1.5 md:space-y-6 md:w-3/5 md:text-start observerTransition  ${transitionClasses}`}>
+      <div className={`container mx-auto flex flex-col-reverse h-screen-80 pb-[80px] w-full justify-center md:flex-row md:items-center md:space-x-4 md:gap-4 overflow-hidden`}>
+        <div className={`left w-full text-center flex flex-col space-y-3 md:space-y-6 md:w-3/5 md:text-start observerTransition ${isIntersecting
+          ? `md:opacity-1 md:translate-x-0`
+          : `md:opacity-0 md:-translate-x-5`}`}>
           <h1 className='text-4xl font-bold lg:text-5xl xl:text-7xl whitespace-nowrap'>Medetcan Diler</h1>
           <div className=' flex items-center justify-center space-x-2 font-medium md:justify-start text-2xl lg:text-4xl -mx-6 md:-mx-0 '>
             <p className='whitespace-nowrap'>{t('I am a')}</p>

@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { MdLightMode, MdNightlight } from 'react-icons/md';
 import { useSelector, useDispatch } from 'react-redux';
-import { setIsDark } from '@/app/redux/features/navSlice';
+import { setIsDark } from '@/redux/features/navSlice';
 
 const DarkModeToggler = () => {
   const isDark = useSelector(state => state.nav.isDark);
