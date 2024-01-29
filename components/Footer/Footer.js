@@ -8,7 +8,7 @@ const Footer = () => {
   const isIntersecting = useIsVisible(footerRef);
   const t = useTranslations('Footer');
   return (
-    <footer ref={footerRef} className={`pb-5 pt-10 observerTransition ${isIntersecting ? 'md:opacity-1 md:translate-y-0' : 'md:opacity-0 md:-translate-y-5'}`}>
+    <footer ref={footerRef} className={`-z-50 pb-5 pt-10 observerTransition ${isIntersecting ? 'md:opacity-1 md:translate-y-0' : 'md:opacity-0 md:-translate-y-5'}`}>
       <h1 className='text-md font-medium text-center md:text-lg'> Copyright	 &copy; 2023 Medetcan Diler • {t('AllRightsReserved')}</h1>
     </footer>
   )
