@@ -8,8 +8,6 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import DarkModeToggler from '../../components/DarkModeToggler/DarkModeToggler';
 
-import Background from '../../components/Background/Background';
-
 const montserrat = Montserrat({
   weight: '400',
   subsets: ['latin'],
@@ -33,10 +31,9 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   }
   return (
     <html lang={locale}>
-      <body className={`${montserrat.className} transition duration-300 dark:bg-[#000] dark:text-[#f2f2f2]`}>
+      <body className={`${montserrat.className} transition duration-300 bg-[#D8D9DA] dark:bg-[#272829] dark:text-[#f2f2f2]`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ReduxProvider>
-            <Background />
             <section className="main-container">
               <Navbar />
               <DarkModeToggler />
