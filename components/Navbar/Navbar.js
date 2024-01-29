@@ -10,6 +10,7 @@ import { scrollToSection } from "@/utils/scrollToSection";
 
 const Navbar = () => {
   const isDark = useSelector(state => state.nav.isDark);
+  const showMobileNav = useSelector(state => state.nav.showMobileNav);
   const locale = useLocale();
   const [selectedLang, setSelectedLang] = useState(locale);
   const t = useTranslations('Navbar');
@@ -24,7 +25,7 @@ const Navbar = () => {
       <div className="left">
         <Image
           className="cursor-pointer -ml-3 md:-ml-0"
-          src={isDark ? '/images/logowhite.svg' : '/images/logo.png'}
+          src={isDark || showMobileNav ? '/images/logowhite.svg' : '/images/logo.png'}
           width={isDark ? 100 : 82}
           height={isDark ? 100 : 82}
           alt="logo"

@@ -1,13 +1,14 @@
 'use client'
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setShowMobileNav } from "@/redux/features/navSlice";
 import { useTranslations } from "next-intl";
 
 import styles from './HamburgerMenu.module.css'
 
 const HamburgerMenu = () => {
-  const [showMobileNav, setShowMobileNav] = useState(false)
   const isDark = useSelector(state => state.nav.isDark);
+  const showMobileNav = useSelector(state => state.nav.showMobileNav);
+  const dispatch = useDispatch();
   const t = useTranslations('Navbar');
 
   const toggleBodyOverflow = () => {
@@ -18,7 +19,7 @@ const HamburgerMenu = () => {
     }
   }
   const handleHamClick = () => {
-    setShowMobileNav(prev => !prev)
+    dispatch(setShowMobileNav())
     toggleBodyOverflow()
   };
 
@@ -33,18 +34,18 @@ const HamburgerMenu = () => {
         });
       }
     }
-    setShowMobileNav(prev => !prev)
+    dispatch(setShowMobileNav())
   };
   return (
     <section className="hamburger md:hidden">
       <div onClick={handleHamClick} className={`${showMobileNav ? styles.change : ''} mr-2 cursor-pointer`}>
-        <div className={`${styles.bar1} ${isDark && 'bg-[#f2f2f2]'}`}></div>
-        <div className={`${styles.bar2} ${isDark && 'bg-[#f2f2f2]'}`}></div>
-        <div className={`${styles.bar3} ${isDark && 'bg-[#f2f2f2]'}`}></div>
+        <div className={`${styles.bar1} ${isDark || showMobileNav ? 'bg-[#f2f2f2]' : ''}`}></div>
+        <div className={`${styles.bar2} ${isDark || showMobileNav ? 'bg-[#f2f2f2]' : ''}`}></div>
+        <div className={`${styles.bar3} ${isDark || showMobileNav ? 'bg-[#f2f2f2]' : ''}`}></div>
       </div>
       {showMobileNav && (
         <div className={`fixed left-0 top-0 w-full -z-10`}>
-          <div className={`flex flex-col h-screen w-full justify-center items-center text-[16px] font-bold space-y-20 bg-darkPurple px-8 py-1.5 ${isDark ? 'text-white' : 'text-black'}`}>
+          <div className={`flex flex-col h-screen w-full justify-center items-center text-[16px] font-bold space-y-20 bg-darkPurple px-8 py-1.5 text-white`}>
             <button className="text-4xl" onClick={e => scrollToSection('work')}>{t('work')}</button>
             <button className="text-4xl" onClick={e => scrollToSection('about')}>{t('about')}</button>
             <button className="whitespace-nowrap text-4xl" onClick={e => scrollToSection('let')}>{t('lets')}</button>
