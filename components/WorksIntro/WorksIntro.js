@@ -43,10 +43,10 @@ const WorksIntro = () => {
             {imagesData.map((image) => (
               <Image
                 key={image.alt}
-                className={image.className}
+                className={`${image.className} w-[80px] h-[80px]`}
                 src={image.src}
-                width={80}
-                height={80}
+                width={0}
+                height={0}
                 alt={image.alt}
                 priority
               />

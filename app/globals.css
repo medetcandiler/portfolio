@@ -12,6 +12,10 @@
     @apply text-4xl md:text-5xl
   }
 
+  .langPickerBtn {
+    @apply cursor-pointer transition-all duration-300 hover:scale-125
+  }
+
   .link {
     @apply ease-in duration-200 hover:-translate-y-[3px] hover:opacity-70
   }

@@ -46,8 +46,8 @@ const HamburgerMenu = () => {
       {showMobileNav && (
         <div className={`fixed left-0 top-0 w-full -z-10`}>
           <div className={`flex flex-col h-screen w-full justify-center items-center text-[16px] font-bold space-y-20 bg-darkPurple px-8 py-1.5 text-white`}>
-            <div class="area z-0">
-              <ul class="circles navCircle">
+            <div className="area z-0">
+              <ul className="circles navCircle">
                 <li></li>
                 <li></li>
                 <li></li>

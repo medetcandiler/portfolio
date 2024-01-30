@@ -64,10 +64,10 @@ const Work = ({ text, project }) => {
               {imageSrc && (
                 <Image
                   src={`/images/${imageSrc}`}
-                  width={60}
-                  height={60}
+                  width={0}
+                  height={0}
                   alt={imageSrc}
-                  className="rounded-lg"
+                  className="rounded-lg w-[60px] h-[60px]"
                   priority
                 />
               )}
@@ -89,8 +89,9 @@ const Work = ({ text, project }) => {
               <Image
                 key={index}
                 src={`/images/${tool}.svg`}
-                height={80}
-                width={80}
+                className="w-[80px] h-[80px]"
+                height={0}
+                width={0}
                 alt={tool}
               />
             ))}

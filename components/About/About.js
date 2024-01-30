@@ -27,19 +27,19 @@ const About = () => {
           <div className="logos flex items-center justify-center space-x-7 md:justify-start">
             <Link href='https://github.com/medetcandiler' target="_blank">
               <Image
-                className="duration-300 ease-in hover:scale-110 text-red-300"
+                className="duration-300 ease-in hover:scale-110 text-red-300 h-[55px] w-[55px]"
                 src={isDark ? '/images/githubwhite.png' : '/images/github.svg'}
-                width={55}
-                height={55}
+                width={0}
+                height={0}
                 alt="github"
               />
             </Link>
             <Link href='https://www.linkedin.com/in/medetcandiler/' target="_blank">
               <Image
-                className="duration-300 ease-in hover:scale-110"
+                className="duration-300 ease-in hover:scale-110 w-[60px] h-[60px]"
                 src='/images/linkedin.png'
-                width={60}
-                height={60}
+                width={0}
+                height={0}
                 alt="github"
               />
             </Link>

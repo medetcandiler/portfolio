@@ -34,8 +34,8 @@ export default function Home() {
   return (
     <>
       <div className="bg-container">
-        <div class="area" >
-          <ul class="circles">
+        <div className="area" >
+          <ul className="circles">
             <li></li>
             <li></li>
             <li></li>
