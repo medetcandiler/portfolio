@@ -64,8 +64,8 @@ const Work = ({ text, project }) => {
               {imageSrc && (
                 <Image
                   src={`/images/${imageSrc}`}
-                  width={0}
-                  height={0}
+                  width={60}
+                  height={60}
                   alt={imageSrc}
                   className="rounded-lg w-[60px] h-[60px]"
                   priority
