@@ -29,8 +29,8 @@ const About = () => {
               <Image
                 className="duration-300 ease-in hover:scale-110 text-red-300 h-[55px] w-[55px]"
                 src={isDark ? '/images/githubwhite.png' : '/images/github.svg'}
-                width={0}
-                height={0}
+                width={55}
+                height={55}
                 alt="github"
               />
             </Link>
@@ -38,9 +38,9 @@ const About = () => {
               <Image
                 className="duration-300 ease-in hover:scale-110 w-[60px] h-[60px]"
                 src='/images/linkedin.png'
-                width={0}
-                height={0}
-                alt="github"
+                width={60}
+                height={60}
+                alt="linkedin"
               />
             </Link>
           </div>
