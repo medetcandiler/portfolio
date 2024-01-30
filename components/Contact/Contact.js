@@ -46,14 +46,16 @@ const Contact = () => {
   return (
     <section ref={contactRef} id="let" className={`special relative py-10 flex flex-col space-y-8 justify-center lg:flex-row lg:space-y-0 md:space-x-12 md:items-center md:py-36`}>
       <div className={`flex justify-center items-center observerTransition ${isIntersecting
-        ? `md:opacity-1 md:translate-y-0`
-        : `md:opacity-0 md:-translate-y-5`}`}>
+        ? `md:opacity-1 md:translate-y-0 lg:translate-x-0`
+        : `md:opacity-0 md:-translate-y-5 lg:-translate-x-5 lg:translate-y-0`}`}>
         <div className="flex flex-col text-center lg:text-start">
           <h1 className="text-xl font-semibold gradientText  md:text-2xl">{t('ConnectWithMe')}</h1>
           <h2 className="text-4xl sm:text-5xl gradientText md:text-6xl whitespace-nowrap lg:text-7xl">{t('LetsCollaborate')}</h2>
         </div>
-      </div>  
-      <div className={`right flex text-md justify-center text-start md:w-1/2 md:text-start observerTransition ${isIntersecting ? 'md:opacity-1 md:translate-y-0' : 'md:opacity-0 md:-translate-y-5'}`}>
+      </div>
+      <div className={`right flex text-md justify-center text-start md:w-1/2 md:text-start observerTransition ${isIntersecting
+        ? `md:opacity-1 md:translate-y-0 lg:translate-x-0`
+        : `md:opacity-0 md:-translate-y-5 lg:translate-x-5 lg:translate-y-0`}`}>
         <form onSubmit={handleSubmit(onSubmit)} className="border border-[#4a2771] p-14  rounded-3xl shadow-[#4a2771] shadow-xl lg:p-20 lg:py-24 dark:shadow-[#8a5dbd] dark:border-[#8a5dbd]" >
           <div className="relative z-0 w-full md:w-[200px] mb-10 group">
             <input
