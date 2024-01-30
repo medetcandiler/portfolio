@@ -15,7 +15,7 @@ const Navbar = () => {
   const [selectedLang, setSelectedLang] = useState(locale);
   const t = useTranslations('Navbar');
 
-  const handleLocaleChange = (lang) => {
+  const handleLocaleChange = (lang) => {  
     setSelectedLang(lang);
     window.location.href = `/${lang}`
   };

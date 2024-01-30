@@ -26,20 +26,38 @@ export default function Home() {
   ];
 
   const renderProjects = () => {
-    return projects.slice(0, isMoreClicked ? projects.length : 3).map(({id, name, text}) => (
+    return projects.slice(0, isMoreClicked ? projects.length : 3).map(({ id, name, text }) => (
       <Work key={id} project={name} text={text} />
     ))
   }
 
   return (
-    <main className="container mx-auto flex flex-col items-center w-full md:px-10 -z-20">
-      <HeroSection />
-      <WorksIntro isMoreClicked={isMoreClicked} />
-      {renderProjects()}
-      <ShowMoreButton isMoreClicked={isMoreClicked} setIsMoreClicked={setIsMoreClicked} />
-      <About />
-      <Contact />
-      {turnToNav && <TopButton />}
-    </main>
+    <>
+      <div className="bg-container">
+        <div class="area" >
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div >
+      </div>
+      <main className="container mx-auto flex flex-col items-center w-full md:px-10">
+        <HeroSection />
+        <WorksIntro isMoreClicked={isMoreClicked} />
+        {renderProjects()}
+        <ShowMoreButton isMoreClicked={isMoreClicked} setIsMoreClicked={setIsMoreClicked} />
+        <About />
+        <Contact />
+        {turnToNav && <TopButton />}
+      </main>
+    </>
   )
 }
