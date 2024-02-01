@@ -32,11 +32,11 @@
   },
   "About": {
     "HeyThere": "Hey there!",
-    "firstText": "I'm a passionate Frontend Developer dedicated to crafting captivating web experiences.",
-    "secondText": "Formerly an engineer in the field, my journey took a turn when I discovered my true passion for web development. With a background in Mechanical Engineering, I bring a unique perspective to my work, blending creativity with a foundation in organization, systematic thinking, and effective problem-solving.",
-    "thirdText": "I honed my skills through a rigorous 6-month immersive web development bootcamp at Re:Coded, accumulating 500+ hours of hands-on learning and project-based experience. This transformative experience solidified my commitment to the world of web development.",
+    "firstText": "Passionate Frontend Developer dedicated to crafting captivating web experiences.",
+    "secondText": "Former engineer turned web enthusiast. Blending creativity with a foundation in organization, systematic thinking, and effective problem-solving.",
+    "thirdText": "Honed skills through a rigorous 6-month web development bootcamp at Re:Coded, solidifying commitment to the world of web development.",
     "fourthText": "Let's build something extraordinary together. Explore my portfolio and let's connect!",
-    "YouCanFindMeOn": "You can find me on:",
+    "YouCanFindMeOn": "Find me on:",
     "OrSendMeAnEmailAt": "or send me an email at",
     "DownloadCV": "Download CV"
   },
