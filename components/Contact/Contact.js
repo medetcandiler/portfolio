@@ -61,7 +61,7 @@ const Contact = () => {
             <input
               type="text"
               id="name"
-              className={`block py-2.5 px-0 w-full md:w-[200px] bg-transparent border-b appearance-none focus:outline-none focus:ring-0 peer ${errors.name ? 'border-[#D40000] dark:border-[#FF8080]' : 'border-black dark:border-slate-100'
+              className={`block py-2.5 px-0 w-full md:w-[200px]  bg-transparent border-b appearance-none focus:outline-none focus:ring-0 peer ${errors.name ? 'border-[#D40000] dark:border-[#FF8080]' : 'border-black dark:border-slate-100'
                 }`}
               placeholder=" "
               {...register("name")}

@@ -31,7 +31,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   }
   return (
     <html lang={locale}>
-      <body className={`${montserrat.className} transition duration-300 bg-[#D8D9DA] dark:bg-[#272829] dark:text-[#f2f2f2]`}>
+      <body className={`${montserrat.className} transition duration-300 bg-[#ffffffs] dark:bg-[#121212] dark:text-[#f2f2f2]`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ReduxProvider>
             <section className="main-container">
