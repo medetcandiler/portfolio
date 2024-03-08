@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   turnToNav: false,
-  isDark: true,
+  isDark: false,
   showMobileNav: false,
 };
 
