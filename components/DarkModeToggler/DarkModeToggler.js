@@ -11,7 +11,7 @@ const DarkModeToggler = () => {
 
   useEffect(() => {
     const storedIsDark = JSON.parse(localStorage.getItem('isDark'));
-    dispatch(setIsDark(storedIsDark !== null ? storedIsDark : true));
+    dispatch(setIsDark(storedIsDark !== null ? storedIsDark : false));
   }, [])
 
   useEffect(() => {

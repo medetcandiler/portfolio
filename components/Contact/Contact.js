@@ -65,6 +65,7 @@ const Contact = () => {
                 }`}
               placeholder=" "
               {...register("name")}
+              autoComplete="off"
             />
             <label
               htmlFor="name"
@@ -82,6 +83,7 @@ const Contact = () => {
                 }`}
               placeholder=" "
               {...register("email")}
+              autoComplete="off"
             />
             <label
               htmlFor="email"
