@@ -76,7 +76,7 @@ const Work = ({ text, project }) => {
                   priority
                 />
               )}
-              <h1 className="text-2xl font-bold capitalize md:text-4xl ">{project}</h1>
+              <h1 className="text-2xl font-bold capitalize md:text-4xl ">{project === 'dilersigorta' ? 'Diler Sigorta' : project}</h1>
             </div>
             <div className="flex items-center space-x-1 text-lg">
               <p className="whitespace-nowrap">{t('VisitAt')}</p>
