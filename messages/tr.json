@@ -5,7 +5,8 @@
     "memeGenerator": "Next.js ve api.imgflip.com API ile desteklenen Meme Oluşturucu, frontend geliştirme becerilerimi sergiler. Kullanıcılar metin girerek ve renk seçerek mizah oluşturabilir ve önizleme yapabilir. Next.js, API entegrasyonu, Redux Toolkit ve kullanıcı dostu arayüz tasarımındaki becerilerimi gösterir.",
     "shopfinity": "Shopfinity, kullanıcılara favori filmlerini veya dizilerini aday gösterme olanağı sunan bir Next.js uygulamasıdır. Veri çekmek için React Query kullanır, Tailwind CSS ile stil verir ve Material-UI bileşenleriyle zenginleştirilmiş bir deneyim sunar.",
     "weatherapp": "React Hava Durumu Uygulaması ile gerçek zamanlı hava durumu güncellemelerini keşfedin! Context API, useContext hook ve Axios kullanılarak veri çekme, durum yönetimi, asenkron veri çekme ve UI/UX iyileştirmelerini kapsayan bir proje.",
-    "thebeatlesfanpage": "Kendinizi The Beatles'in büyülü dünyasına adayın. HTML, Tailwind CSS ve Vanilla JavaScript ile oluşturulan her satır, kodun her noktasında favori grubumun zamansız melodilerini yankılar."
+    "thebeatlesfanpage": "Kendinizi The Beatles'in büyülü dünyasına adayın. HTML, Tailwind CSS ve Vanilla JavaScript ile oluşturulan her satır, kodun her noktasında favori grubumun zamansız melodilerini yankılar.",
+    "dilersigorta": "An insurance website designed to deliver comprehensive insurance solutions to clients with a focus on server-side rendering power and robust SEO capabilities. Leveraged Next.js for server-side rendering, ensuring improved performance. Ensured platform reliability, security, and scalability through rigorous testing and optimization. Tools: Next.js, Tailwind CSS"
   },
   "Navbar": {
     "work": "İşlerim",

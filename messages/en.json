@@ -5,7 +5,8 @@
     "memeGenerator": "Meme Generator, powered by Next.js and the api.imgflip.com API, demonstrates my frontend development proficiency. Users can create and preview memes, showcasing skills in Next.js, API integration, Redux Toolkit, and user-friendly interface design.",
     "shopfinity": "Shopfinity, a Next.js application, enables users to nominate favorite films or series. Leveraging React Query for data fetching, Tailwind CSS for styling, and Material-UI components, it ensures a seamless and visually appealing experience.",
     "weatherapp": "Explore real-time weather updates with my React Weather App! Utilizing the Context API, useContext hook, and Axios for data fetching, this project enhances React skills, covering state management, asynchronous data fetching, and UI/UX improvements.",
-    "thebeatlesfanpage": "Immerse yourself in the enchanting realm of The Beatles through this dedicated web page. Crafted with HTML, Tailwind CSS, and Vanilla JavaScript, every line of code echoes the timeless melodies of my favorite band."
+    "thebeatlesfanpage": "Immerse yourself in the enchanting realm of The Beatles through this dedicated web page. Crafted with HTML, Tailwind CSS, and Vanilla JavaScript, every line of code echoes the timeless melodies of my favorite band.",
+    "dilersigorta": "An insurance website designed to deliver comprehensive insurance solutions to clients with a focus on server-side rendering power and robust SEO capabilities. Leveraged Next.js for server-side rendering, ensuring improved performance. Ensured platform reliability, security, and scalability through rigorous testing and optimization. Tools: Next.js, Tailwind CSS"
   },
   "Navbar": {
     "work": "My Work",

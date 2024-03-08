@@ -18,11 +18,12 @@ export default function Home() {
 
   const projects = [
     { id: 1, name: 'givingly', text: t('givingly') },
-    { id: 2, name: 'cineverse', text: t('cineverse') },
+    { id: 2, name: 'dilersigorta', text: t('dilersigorta') },
     { id: 3, name: 'memegenerator', text: t('memeGenerator') },
     { id: 4, name: 'shopfinity', text: t('shopfinity') },
     { id: 5, name: 'weatherapp', text: t('weatherapp') },
-    { id: 6, name: 'theBeatles', text: t('thebeatlesfanpage') },
+    { id: 6, name: 'cineverse', text: t('cineverse') },
+    { id: 7, name: 'theBeatles', text: t('thebeatlesfanpage') },
   ];
 
   const renderProjects = () => {

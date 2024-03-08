@@ -21,10 +21,10 @@ const Work = ({ text, project }) => {
       tools: [isDark ? 'nextjsdark' : 'nextjs', 'react', 'tailwind', 'redux', 'firebase'],
       href: 'https://crowdfunding-app-team-9-akej.vercel.app/',
     },
-    cineverse: {
-      image: 'movie.svg',
-      tools: ['js', 'tailwind', 'api', 'css'],
-      href: 'https://github.com/202303-PRM-TR-FEW/movie-project-aybike-berkay-medetcan',
+    dilersigorta: {
+      image: isDark ? 'dilersigortawhite.png' : 'dilersigorta.png',
+      tools: [isDark ? 'nextjsdark' : 'nextjs', 'react', 'tailwind'],
+      href: 'https://www.dilersigorta.com/'
     },
     memegenerator: {
       image: 'meme.png',
@@ -40,6 +40,11 @@ const Work = ({ text, project }) => {
       image: 'weather.svg',
       tools: ['react', 'css', 'restapi', 'redux', 'axios'],
       href: 'https://weather-app-with-react-js-omega.vercel.app/',
+    },
+    cineverse: {
+      image: 'movie.svg',
+      tools: ['js', 'tailwind', 'api', 'css'],
+      href: 'https://github.com/202303-PRM-TR-FEW/movie-project-aybike-berkay-medetcan',
     },
     theBeatles: {
       image: 'beatles.jpeg',
